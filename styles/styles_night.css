@@ -1,0 +1,298 @@
+body{
+    background-color: #0f0e17;
+}
+a{
+    color: #a7a9be;
+    text-decoration: none;
+}
+.wow{
+    margin: 10px;
+    /*border: 1px solid black;*/
+}
+.navigation{
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: flex-start;
+    margin: 10px;
+}
+.logo{
+    background-image: url("../images/logo.png");
+    width: 200px;
+    height: 75px;
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+.nav{
+    color: #a7a9be;
+    font-size: 30px;
+    font-family: "PT Sans", serif;
+    align-self: center;
+}
+.item:hover{
+    color: #ff8906;
+}
+.personal{
+    display: grid;
+    grid-template-areas:
+    'photo name name'
+    'photo about-me feedback';
+    grid-template-columns: 450px 580px 580px;
+    grid-template-rows: 100px 1fr;
+    grid-gap: 10px;
+    justify-content: center;
+}
+.photo{
+    background-image: url("../images/photo.jpg");
+    width: 450px;
+    height: 500px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    grid-area: photo;
+}
+.name{
+    color: #a7a9be;
+    font-size: 60px;
+    font-family: "PT Sans", serif;
+    text-align: center;
+    grid-area: name;
+}
+.about-me{
+    color: #a7a9be;
+    font-size: 30px;
+    font-family: "PT Sans", serif;
+    text-align: center;
+    grid-area: about-me;
+    align-self: start;
+}
+.feedback{
+    color: #a7a9be;
+    font-size: 30px;
+    font-family: "PT Sans", serif;
+    text-align: center;
+    grid-area: feedback;
+    align-self: start;
+}
+.some-text{
+    color: #001858;
+    font-size: 25px;
+    font-family: "PT Sans", serif;
+    align-self: start;
+}
+.name-1{
+    color: #a7a9be;
+    font-size: 45px;
+    font-family: "PT Sans", serif;
+    text-align: center;
+    grid-area: name;
+}
+.bookshelf{
+    display: grid;
+    grid-template-areas:
+    'name name name name'
+    'about-book about-book about-book about-book';
+    grid-template-columns: repeat(4, 400px);
+    grid-template-rows: 75px 1fr;
+    grid-gap: 10px;
+    justify-content: center;
+}
+.about-book{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 1fr;
+    margin: 10px;
+    padding: 10px;
+    background-color: #f25f4c;
+}
+.book-1, .book-2, .book-3, .book-4{
+    width: 250px;
+    height: 379px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    justify-self: center;
+}
+.book-1{
+    background-image: url("../images/book1.jpg");
+}
+.book-2{
+    background-image: url("../images/book2.jpg");
+}
+.book-3{
+    background-image: url("../images/book3.jpg");
+}
+.book-4{
+    background-image: url("../images/book4.jpg");
+}
+.authors{
+    display: grid;
+    grid-template-areas:
+    'name name'
+    'about-author about-author'
+    'about-author about-author';
+    grid-template-columns: 810px 810px;
+    grid-template-rows: 75px 1fr 1fr;
+    grid-gap: 10px;
+    justify-content: center;
+}
+.about-author{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 1fr;
+    margin: 10px;
+    padding: 10px;
+    background-color: #f25f4c;
+}
+.author-1, .author-2, .author-3, .author-4{
+    width: 700px;
+    height: 650px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    justify-self: center;
+}
+.author-1{
+    background-image: url("../images/author1.jpg");
+}
+.author-2{
+    background-image: url("../images/author2.jpg");
+}
+.author-3{
+    background-image: url("../images/author3.jpg");
+}
+.author-4{
+    background-image: url("../images/author4.jpg");
+}
+
+@media screen and (min-width: 650px) and (max-width: 1650px){
+    .bookshelf{
+        display: grid;
+        grid-template-areas:
+    'name name'
+    'about-book about-book'
+    'about-book about-book';
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 75px 1fr 1fr;
+        grid-gap: 1px;
+        justify-content: center;
+    }
+    .authors{
+        display: grid;
+        grid-template-areas:
+    'name'
+    'about-author'
+    'about-author'
+    'about-author'
+    'about-author';
+        grid-template-columns: 1fr;
+        grid-template-rows: 75px 1fr 1fr 1fr 1fr;
+        grid-gap: 1px;
+        justify-content: center;
+    }
+    .personal{
+        display: grid;
+        grid-template-areas:
+    'name'
+    'photo'
+    'about-me'
+    'feedback';
+        grid-template-columns: 1fr;
+        grid-template-rows: 100px 1fr 270px 230px;
+        grid-gap: 10px;
+    }
+    .photo{
+        background-image: url("../images/photo.jpg");
+        width: 450px;
+        height: 500px;
+        background-size: cover;
+        background-repeat: no-repeat;
+        grid-area: photo;
+        justify-self: center;
+    }
+}
+@media screen and (min-width: 200px) and (max-width: 650px){
+    .bookshelf{
+        display: grid;
+        grid-template-areas:
+    'name'
+    'about-book'
+    'about-book'
+    'about-book'
+    'about-book';
+        grid-template-columns: 1fr;
+        grid-template-rows: 50px 1fr 1fr 1fr 1fr;
+        grid-gap: 10px;
+        justify-content: center;
+    }
+    .authors{
+        display: grid;
+        grid-template-areas:
+    'name'
+    'about-author'
+    'about-author'
+    'about-author'
+    'about-author';
+        grid-template-columns: 1fr;
+        grid-template-rows: 100px 1fr 1fr 1fr 1fr;
+        grid-gap: 10px;
+        justify-content: center;
+    }
+    .author-1, .author-2, .author-3, .author-4{
+        width: 250px;
+        height: 250px;
+        background-size: cover;
+        background-repeat: no-repeat;
+        justify-self: center;
+    }
+    .name-1{
+        color: #001858;
+        font-size: 37px;
+        font-family: "PT Sans", serif;
+        text-align: center;
+        grid-area: name;
+    }
+    .personal{
+        display: grid;
+        grid-template-areas:
+    'name'
+    'photo'
+    'about-me'
+    'feedback';
+        grid-template-columns: 1fr;
+        grid-template-rows: 60px 1fr 240px 200px;
+        grid-gap: 10px;
+    }
+    .photo{
+        background-image: url("../images/photo.jpg");
+        width: 300px;
+        height: 350px;
+        background-size: cover;
+        background-repeat: no-repeat;
+        grid-area: photo;
+        justify-self: center;
+    }
+    .name{
+        color: #001858;
+        font-size: 45px;
+        font-family: "PT Sans", serif;
+        text-align: center;
+        grid-area: name;
+    }
+    .about-me{
+        color: #172c66;
+        font-size: 20px;
+        font-family: "PT Sans", serif;
+        text-align: center;
+        grid-area: about-me;
+        align-self: start;
+    }
+    .feedback{
+        color: #172c66;
+        font-size: 20px;
+        font-family: "PT Sans", serif;
+        text-align: center;
+        grid-area: feedback;
+        align-self: start;
+    }
+}
