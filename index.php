@@ -11,10 +11,10 @@
     $time = date("H");
     $night = "20";
     $day = "08";
-    if ($time >= $night or $time < $day) {
-        echo '<link rel="stylesheet" href="styles/styles_night.css">';
-    } else {
+    if ($time > $day and $time <= $night) {
         echo '<link rel="stylesheet" href="styles/styles_day.css">';
+    } else {
+        echo '<link rel="stylesheet" href="styles/styles_night.css">';
     }
     ?>
     <title>Academy</title>
