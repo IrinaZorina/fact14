@@ -1,0 +1,62 @@
+.main_header{
+    margin: 3px;
+    border: 3px solid white;
+}
+
+.logo {
+    width: 10%;
+    display: block;
+}
+
+.myImage{
+    width: 100%;
+    margin: 0;
+}
+
+.zagolovok{
+    text-align: center;
+    margin: 10px;
+    font-size: 2em;
+}
+
+.text{
+    text-align: center;
+    margin: 10px;
+    font-size: 2em;
+}
+
+.container_main{
+    display: grid;
+    grid-template-columns: 1fr 1fr 2fr 2fr;
+    grid-auto-rows: auto;
+    grid-template-areas:
+    "image image name name"
+    "image image interests about"
+    "image image . .";
+    border: 3px solid white;
+    margin: 3px;
+}
+
+.image_im{
+    grid-area: image;
+    border: 3px solid white;
+    margin: 3px;
+}
+
+.name{
+    grid-area: name;
+    border: 3px solid white;
+    margin: 3px;
+}
+
+.interests{
+    grid-area: interests;
+    border: 3px solid white;
+    margin: 3px;
+}
+
+.about{
+    grid-area: about;
+    border: 3px solid white;
+    margin: 3px;
+}
