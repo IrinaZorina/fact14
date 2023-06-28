@@ -164,6 +164,60 @@ a{
 .author-4{
     background-image: url("../images/author4.jpg");
 }
+form{
+    font-size: 30px;
+}
+.input-text{
+    border: 1px solid green;
+    font-size: 30px;
+}
+table, td{
+    border: 3px solid green;
+    border-collapse: collapse;
+    font-size: 30px;
+    width: 700px;
+    margin: auto;
+}
+.Mendeleev{
+    display: grid;
+    grid-template-columns: 150px 150px;
+    grid-template-rows: auto;
+}
+.table-1{
+    display: grid;
+    grid-template-areas:
+    'a b'
+    'a c'
+    'd d';
+    grid-template-columns: 50px 100px;
+    grid-template-rows: auto;
+}
+.family-1{
+    padding: 10px;
+    border: 1px solid black;
+    background-color: coral;
+}
+.family-2{
+    padding: 10px;
+    border: 1px solid black;
+    background-color: gold;
+}
+.a{
+    grid-area: a;
+    font-size: 40px;
+}
+.b{
+    grid-area: b;
+    text-align: right;
+}
+.c{
+    grid-area: c;
+    text-align: right;
+}
+.d{
+    grid-area: d;
+    font-size: 20px;
+}
 
 @media screen and (min-width: 650px) and (max-width: 1650px){
     .bookshelf{

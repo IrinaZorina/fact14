@@ -73,7 +73,7 @@ a{
     align-self: start;
 }
 .some-text{
-    color: #001858;
+    color: #a7a9be;
     font-size: 25px;
     font-family: "PT Sans", serif;
     align-self: start;
@@ -103,7 +103,7 @@ a{
     width: 1fr;
     margin: 10px;
     padding: 10px;
-    background-color: #f25f4c;
+    background-color: #2e2f3e;
 }
 .book-1, .book-2, .book-3, .book-4{
     width: 250px;
@@ -143,7 +143,7 @@ a{
     width: 1fr;
     margin: 10px;
     padding: 10px;
-    background-color: #f25f4c;
+    background-color: #2e2f3e;
 }
 .author-1, .author-2, .author-3, .author-4{
     width: 700px;
@@ -163,6 +163,60 @@ a{
 }
 .author-4{
     background-image: url("../images/author4.jpg");
+}
+form{
+    font-size: 30px;
+}
+.input-text{
+    border: 1px solid green;
+    font-size: 30px;
+}
+table, td{
+    border: 3px solid green;
+    border-collapse: collapse;
+    font-size: 30px;
+    width: 700px;
+    margin: auto;
+}
+.Mendeleev{
+    display: grid;
+    grid-template-columns: 150px 150px;
+    grid-template-rows: auto;
+}
+.table-1{
+    display: grid;
+    grid-template-areas:
+    'a b'
+    'a c'
+    'd d';
+    grid-template-columns: 50px 100px;
+    grid-template-rows: auto;
+}
+.family-1{
+    padding: 10px;
+    border: 1px solid black;
+    background-color: coral;
+}
+.family-2{
+    padding: 10px;
+    border: 1px solid black;
+    background-color: gold;
+}
+.a{
+    grid-area: a;
+    font-size: 40px;
+}
+.b{
+    grid-area: b;
+    text-align: right;
+}
+.c{
+    grid-area: c;
+    text-align: right;
+}
+.d{
+    grid-area: d;
+    font-size: 20px;
 }
 
 @media screen and (min-width: 650px) and (max-width: 1650px){
