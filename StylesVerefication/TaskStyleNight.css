@@ -1,0 +1,83 @@
+body{
+    background-color: rgb(108, 92, 118);
+    color: rgb(250, 250, 250);
+}
+.tabl {
+    text-decoration: none;
+    color: #FFFFFF;
+}
+table {
+    border: 1px solid #ffffff;
+}
+.tableMendeleev{
+    border: 1px solid black;
+}
+.headerlogo {
+    display: grid;
+    grid-template-columns: repeat(7,1fr);
+    border-bottom: 1px solid rgb(255, 255, 255);
+
+}
+
+td{
+    border: 1px solid black;
+}
+
+.tdTest {
+    border: 1px solid #0de03b;
+}
+
+.images {
+    height: 30px;
+    width: 30px;
+    transform: rotate(180deg);
+    filter: hue-rotate(90deg);
+}
+
+.cell1 {
+    width: 100px;
+    height: 50px;
+    background-color: rgb(228, 108, 108);
+    position: relative;
+    text-align: center;
+}
+
+.topleft {
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.topright {
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+
+.bottomleft {
+
+    position: absolute;
+    bottom: 0;
+    left: 0;
+}
+
+.bottomright {
+
+    position: absolute;
+    bottom: 30%;
+    right: 0;
+}
+
+.cell2 {
+    width: 100px;
+    height: 50px;
+    background-color: rgb(225, 223, 78);
+    position: relative;
+    text-align: center;
+}
+
+.cell3 {
+    width: 100px;
+    height: 50px;
+    background-color: aliceblue;
+}
