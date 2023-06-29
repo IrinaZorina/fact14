@@ -42,7 +42,7 @@ while($num1>50){
 	$iterations1++;
 }
 
-echo "<p class='zad'>количество итераций = $iterations1/p><br>";
+echo "<p class='zad'>Задача 2 (цикл While)<br>количество итераций = $iterations1</p><br>";
 
 //задание2 через цикл for
 
@@ -54,12 +54,14 @@ for(;$num2>50;$iterations2++){
 	$num2/=2;
 }
 
-echo "<p class='zad'>количество итераций = $iterations2</p><br>";
+echo "<p class='zad'>Задача 2 (цикл For)<br>кколичество итераций = $iterations2</p><br>";
 
 //задание 3
 
 $p=0;
 $i=0;
+
+echo "<p class='zad'>Задача 3<br></p>";
 
 if($i<=10 && $i>=0){
 	while($i<11){
@@ -70,9 +72,65 @@ if($i<=10 && $i>=0){
 }
 
 else{
-	echo "<p class='zad'>Введите другое число!!!</p>";
+	echo "<p class='zad'>Введите другое число!!!</p><br>";
 }
 
+//доп задача 1
+
+$chis1=1;
+$znam1=1;
+$otv1=0;
+$zak_chis=1;
+$iterations3=0;
+
+do{
+	$otv1+=$chis1/$znam1;
+	$zak_chis+=2;
+	$chis1+=$zak_chis;
+	$znam1*=2;
+	$iterations3++;
+}
+while($otv1<10);
+
+echo "<p class='zad'>Доп задача 1<br>количество итераций = $iterations3</p><br>";
+
+//Доп задача 2
+
+$chis2=1;
+$znam2=1;
+$otv2=0;
+
+$iterations4=0;
+
+do{
+	$otv2+=$chis2/$znam2;
+
+	$chis2+=2;
+	$znam2+=1;
+	$iterations4++;
+}
+while($otv2<10);
+
+echo "<p class='zad'>Доп задача 2<br>количество итераций = $iterations4</p><br>";
+
+//Доп задача 3
+
+$chis3=1;
+$znam3=1;
+$otv3=0;
+
+$iterations5=0;
+
+do{
+	$otv3+=$chis3/$znam3;
+
+	$chis3+=2;
+	$znam3+=2;
+	$iterations5++;
+}
+while($otv3<10);
+
+echo "<p class='zad'>Доп задача 3<br>количество итераций = $iterations5</p><br>";
 
 ?>
 
