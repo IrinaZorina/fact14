@@ -1,0 +1,113 @@
+body{
+    background-color: rgb(31, 14, 2);
+    color: blanchedalmond;
+}
+.head-line{
+    height: 50px;
+    background-color: cornsilk;
+    color: rgb(68, 30, 3);
+}
+.image_logo{
+    transform: skewX(-10deg);
+}
+.name, .block-name{
+    font-size: 2em;
+    font-style: oblique;
+    color: blanchedalmond;
+}
+.list{
+    font-size: 18px;
+    font-style: oblique;
+}
+.item:hover{
+    color: chocolate;
+}
+.img{
+    height: 420px;
+    width: 75%;
+}
+.img2{
+    height: 120px;
+    width: 240px;
+}
+.section_one{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+.gallery-horizontal-block{
+    display: grid;
+    grid-template-columns: 4, 1fr;
+}
+.sign{
+    float: left; 
+    border: 1px solid #333;
+    padding: 7px; 
+    margin: 10px 0 5px 5px;
+    background: #f0f0f0; 
+    color: rgb(31, 14, 2);
+   }
+   .sign figcaption {
+    margin: 0 auto 5px;
+   }
+.hard-skills{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+}
+.block-name2{
+    grid-column-start: 1;
+    grid-column-end: 3;
+    font-size: 32px;
+    color: blanchedalmond;
+    font-style: oblique;
+    text-align: left;
+}
+.image-skills{
+    height: 85%;
+    width: 500px;
+}
+.foot{
+    position: fixed;
+    right: 0; bottom: 0;
+    font-size: 75%;
+    padding: -100px;
+}
+@media screen and (max-width: 650px){
+    .section_one{
+        grid-template-columns: repeat(1, 1fr);
+    }
+}
+@media screen and (max-width: 1000px) and (min-width: 650px){
+    .section_one{
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+@media screen and (min-width: 1000px){
+    .section_one{
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+@media screen and (max-width: 550px){
+    .gallery-horizontal-block{
+        grid-template-columns: repeat(1, 1fr);
+    }
+}
+@media screen and (max-width: 1050px) and (min-width: 550px){
+    .gallery-horizontal-block{
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+@media screen and (min-width: 1050px){
+    .gallery-horizontal-block{
+        grid-template-columns: repeat(4, 1fr);
+    }
+}
+@media screen and (max-width: 400px){
+    .hard-skills{
+        grid-template-columns: repeat(1, 1fr);
+    }
+}
+@media screen and (min-width: 400px){
+    .hard-skills{
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
