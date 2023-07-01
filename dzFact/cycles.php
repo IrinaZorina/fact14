@@ -129,8 +129,9 @@ do{
 	$iterations5++;
 }
 while($otv3<10);
+$iterations5+=1;
 
-echo "<p class='zad'>Доп задача 3<br>количество итераций = $iterations5</p><br>";
+echo "<p class='zad'>Доп задача 3<br>количество итераций = " . $iterations5 . "</p><br>";
 
 ?>
 
