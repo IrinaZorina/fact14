@@ -213,48 +213,28 @@
     }
 
     echo '<br>';
-    // echo '<pre>'; 
-    // print_r($arr); 
+    // echo '<pre>';
+    // print_r($arr);
     // echo '</pre>';
 
-    $column = [];
-    foreach ($arr as $key => $value) {
-        if ($key % 2 == 0) {
-            $column[] = $value;
-        }
-    }
+    // неправильно, не пойму как!
+
+    // $column = [];
+    // $max = 10;
+    // foreach ($arr as $key => $value) {
+    //     if ($key % 2 == 0) {
+    //         foreach ($value as $item) {
+    //             if ($item < $max) {
+    //                 $max = $item;
+    //             }
+    //         }
+    //         $column[] = $max;
+    //     }
+    // }
 
     // echo '<pre>';
     // print_r($column);
     // echo '</pre>';
-
-    $max1 = $column[0][1];
-    $max2 = $column[1][1];
-    $max3 = $column[2][1];
-    for ($i = 1; $i < 6; $i++) {
-        for ($j = 0; $j < 3; $j++) {
-            echo $column[$j][$i] . ' ';
-            if ($column[0][$i] > $max1) {
-                $max1 = $column[0][$i];
-            }
-            if ($column[1][$i] > $max2) {
-                $max2 = $column[1][$i];
-            }
-            if ($column[2][$i] > $max3) {
-                $max3 = $column[2][$i];
-            }
-        }
-        echo '<br>';
-    }
-
-    echo 'Максиальные элементы: <br>';
-    echo $max1 . ' ' . $max2 . ' ' . $max3 . '<br>';
-
-    $result = 1;
-    $result = $max1 * $max2 * $max3;
-
-    echo 'Произведение: <br>';
-    echo $result;
     ?>
 </main>
 <?php require_once 'inc/footer.php'; ?>
