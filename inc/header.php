@@ -30,7 +30,7 @@
                 <a href="tables.php" class="item">Таблица</a>
                 <a href="forms.php" class="item">HTML-формы</a>
                 <a href="loops.php" class="item">Циклы</a>
-                </ul>
+                <a href="arrays.php" class="item">Массивы</a>
             </nav>
         </div>
     </header>
