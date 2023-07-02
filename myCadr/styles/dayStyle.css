@@ -1,0 +1,218 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  p {
+    text-indent: 15px;
+    text-align: justify;
+    padding: 5px 5px 5px 5px;
+    color: black;
+    font-size: 26px;
+    font-family: "Roboto", sans-serif;
+    margin-bottom: 20px;
+  }
+  /* Зададим рамки и отступы */
+  .header,
+  .photo,
+  .name,
+  .info,
+  .comment {
+    border: 5px solid white;
+    margin-bottom: 5px;
+  }
+  .name,
+  .info,
+  .comment {
+    margin-left: 5px;
+  }
+  /* Зададим цвета и рамки блока нашей карточки */
+  body{
+    background-color:grey;
+  }
+  .header {
+    background-color: teal;
+  }
+  .name {
+    background-color: blueviolet;
+  }
+  .info,
+  .comment {
+    background-color: teal;
+  }
+  
+  /* ===============КАРТОЧКА НА ФЛЕКС===================== */
+  .main_container {
+    display: flex;
+    flex-flow: row wrap;
+    max-width: 1500px;
+    margin: 0 auto;
+  }
+  .header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    height: 100px;
+  }
+  .logo {
+    margin-left: 30px;
+    font-size: 26px;
+    font-family: "Roboto", sans-serif;
+    color: aliceblue;
+  }
+  .nav_bar a {
+    font-family: "Roboto", sans-serif;
+    color: aliceblue;
+    margin-left: 10px;
+    margin-right: 30px;
+    text-decoration: none;
+  }
+  a:hover {
+    color: silver;
+  }
+  .photo {
+    width: 260px;
+    height: 360px;
+  }
+  .photo img {
+    /* Зададим жесткие размеры для фото */
+    width: 250px;
+    height: 350px;
+  }
+  /* Растянем container1 по оставшейся ширине main_container - photo */
+  .container1 {
+    flex: 1;
+  }
+  .name {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100px;
+  }
+  .name_text {
+    font-size: 26px;
+    font-family: "Roboto", sans-serif;
+    color: aliceblue;
+  }
+  /*Сделаем элементы container2 flex-элементами  */
+  .container2 {
+    display: flex;
+    margin-bottom: 100px;
+  }
+  .info,
+  .comment {
+    /* зададим равную ширину для обоих блоков  */
+    flex: 1;
+    font-size: 20px;
+    font-family: "Roboto", sans-serif;
+    color: aliceblue;
+  }
+  
+  /* =================ДОМАШКА FLEX================== */
+  .flex_container {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  .image_block {
+    width: 190px;
+    text-align: center;
+    background-color: aliceblue;
+    margin-bottom: 100px;
+  }
+  .image img {
+    position: relative;
+    width: 180px;
+    height: 180px;
+    top: 5px;
+  }
+  .image_text {
+    font-family: sans-serif;
+    font-size: 14px;
+    margin-top: 2px;
+  }
+  
+  /* =================ДОМАШКА GRID================== */
+  .grid_container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    justify-items: center;
+    max-width: 1300px;
+    margin: 0 auto;
+  }
+  .grid_container .image_block {
+    width: 312px;
+    margin-bottom: 20px;
+  }
+  .grid_container .image img {
+    width: 300px;
+    height: 300px;
+  }
+  .grid_container .image_text {
+    margin-top: 2px;
+  }
+  /* =================MEDIA ДЛЯ КАРТОЧКИ================== */
+  @media screen and (min-width: 200px) and (max-width: 320px) {
+    .main_container {
+      max-width: 320px;
+    }
+    .header {
+      max-width: 100%;
+    }
+    .name,
+    .info,
+    .comment {
+      max-width: 320px;
+    }
+    .container2 {
+      flex-flow: column wrap;
+    }
+  }
+  @media screen and (min-width: 320px) {
+    .container2 {
+      flex-flow: column wrap;
+    }
+  }
+  @media (min-width: 900px) {
+    .container2 {
+      flex-flow: row wrap;
+    }
+  }
+  
+  /* =================MEDIA ДЛЯ КАРТИНОК================== */
+  /* Смартфон */
+  @media screen and (min-width: 200px) and (max-width: 320px) {
+    .grid_container {
+      grid-template-columns: 1fr;
+    }
+  }
+  @media (min-width: 320px) {
+    .grid_container {
+      grid-template-columns: 1fr;
+    }
+  }
+  @media (min-width: 768px) {
+    .grid_container {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+  /* Нетбук */
+  @media (min-width: 1024px) {
+    .grid_container {
+      grid-template-columns: repeat(3, 1fr);
+    }
+  }
+  /* Монитор */
+  @media (min-width: 1280px) {
+    .grid_container {
+      grid-template-columns: repeat(4, 1fr);
+    }
+  }
+  
+ 
+

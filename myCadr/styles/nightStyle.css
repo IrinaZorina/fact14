@@ -4,7 +4,7 @@
   box-sizing: border-box;
 }
 /* ================================================================================================== */
-/*                                ДНЕВНОЙ СТИЛЬ АБЗАЦЕВ                                               */
+/*                                НОЧНОЙ СТИЛЬ АБЗАЦЕВ                                               */
 /* ================================================================================================== */
 p {
   text-indent: 15px;
@@ -12,7 +12,7 @@ p {
   padding: 5px 5px 5px 5px;
   font-size: 26px;
   font-family: "Roboto", sans-serif;
-  color: black;
+  color:aliceblue;
   margin: 50px 0 20px 0;
 }
 /* Зададим рамки и отступы */
@@ -31,7 +31,7 @@ p {
 }
 /* Зададим цвета и рамки блока нашей карточки */
 body{
-  background-color:lightgrey;
+  background-color:black;
 }
 .header,.info,.comment,.footer_contatiner {
   background-color: teal;

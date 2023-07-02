@@ -4,38 +4,35 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="styles/style.css">
+    <!-- <link rel="stylesheet" href="styles/style.css"> -->
+    <?php
+    $currentTime=date('H');
+    $dayTime='8';
+    $nightTime='20';
+    if($currentTime>$dayTime && $currentTime<$nightTime){
+        echo '<link rel="stylesheet" href="styles/style.css">';
+    }else{
+        echo '<link rel="stylesheet" href="styles/nightStyle.css">';
+    }
+    ?>
     <title>My Card</title>
 </head>
 
 <body>
-    <style>
-        body {
-            background-color: <?php include "styles/backgroundColor.php"; ?>
-        }
 
-        p,
-        .logo,
-        .name_text {
-            color: <?php include "styles/fontColor.php"; ?>
-        }
-    </style>
-    <header class="header">
-        <div class="logo">LOGO</div>
-        <div class="nav_bar">
-            <a href="#"> Таблица Менделеева</a>
-        </div>
-    </header>
+    <?php
+    require "header.php";
+    ?>
 
     <div class="main_container">
         <div class="photo">
             <img src="image/selfie.jpg" alt="my_selfie">
         </div>
-        <div class="container1">
+        <div class="index_container1">
             <div class="name">
                 <div class="name_text">Кирилл Юрков</div>
             </div>
-            <div class="container2">
+            <div class="index_container2">
                 <div class="info">
                     <p>Всем привет! Мне 38 лет. Работал в разных сферах. Последние 2 года работаю на производстве
                         и пытаюсь изучать программирование.
@@ -53,7 +50,7 @@
         </div>
     </div>
     <!-- =========================Картинки на флекс================== -->
-    <div class="flex_container">
+    <div class="index_flex_container">
         <div class="image_block">
             <div class="image">
                 <img src="image/Sam_Houston_portrait.jpg" alt="Samuel_Houston" />
@@ -83,7 +80,7 @@
         </div>
     </div>
     <!-- ===================== Картинки на грид================================== -->
-    <div class="grid_container">
+    <div class="index_grid_container">
         <div class="image_block">
             <div class="image">
                 <img src="image/Enron_Complex.jpg" alt="Enron_Complex" />
@@ -112,6 +109,10 @@
             <div class="image_text">Aerial View of the Johnson Space Center</div>
         </div>
     </div>
+<!-- =====================FOOTER====================== -->
+<?php
+include "footer.php";
+?>
 </body>
 
 </html>
