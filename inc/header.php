@@ -31,6 +31,7 @@
                 <a href="forms.php" class="item">HTML-формы</a>
                 <a href="loops.php" class="item">Циклы</a>
                 <a href="arrays.php" class="item">Массивы</a>
+                <a href="strings.php" class="item">Строки</a>
             </nav>
         </div>
     </header>

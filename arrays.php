@@ -195,14 +195,6 @@
 
     <?php
 
-    // $arr = [
-    //     [1, 2, 3, 4, 5, 6],
-    //     [7, 8, 9, 1, 2, 3],
-    //     [4, 5, 6, 7, 8, 9],
-    //     [1, 2, 3, 4, 5, 6],
-    //     [7, 8, 9, 1, 2, 3]
-    // ];
-
     $arr = [];
     for ($i = 1; $i < 6; $i++) {
         for ($j = 1; $j < 7; $j++) {
@@ -219,22 +211,21 @@
 
     // неправильно, не пойму как!
 
-    // $column = [];
-    // $max = 10;
-    // foreach ($arr as $key => $value) {
-    //     if ($key % 2 == 0) {
-    //         foreach ($value as $item) {
-    //             if ($item < $max) {
-    //                 $max = $item;
-    //             }
-    //         }
-    //         $column[] = $max;
-    //     }
-    // }
+    $column = [];
+    foreach ($arr as $key => $value) {
+        if ($key % 2 == 0) {
+            foreach ($value as $item) {
+                if ($item < $max) {
+                    $max = $item;
+                }
+            }
+            $column[] = $max;
+        }
+    }
 
-    // echo '<pre>';
-    // print_r($column);
-    // echo '</pre>';
+    echo '<pre>';
+    print_r($column);
+    echo '</pre>';
     ?>
 </main>
 <?php require_once 'inc/footer.php'; ?>
