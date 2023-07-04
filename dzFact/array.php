@@ -4,9 +4,11 @@
 
 echo "<p class='zad'>Задачи 1-7 закоментированны в файле array.php</p>";
 
-//Здача 1
+//Задача 1
 
-/*$array=[50, 45, 40, 35, 30];
+echo "<p class='zad'>Задача 1</p>";
+
+$array=[50, 45, 40, 35, 30];
 
 $result=0;
 
@@ -14,44 +16,50 @@ foreach($array as $value){
     $result+=$value;
 }
 
-echo "$result" . "<br>";*/
+echo "<span class='zad'>$result</span><br>";
 
 //Задача 2
 
-/*echo "в одном порядке: <br>";
+echo "<p class='zad'>Задача 2</p>";
+
+echo "<span class='zad'>в одном порядке: </span><br>";
 
 $array=[];
 
 for($i=0;$i<5;$i++){
     $array[$i]=mt_rand(0,100);
-    echo "$array[$i] <br>";
+    echo "<span class='zad'>$array[$i] </span><br>";
 }
 
 
-echo "в другом порядке: <br>";
+echo "<span class='zad'>в другом порядке: </span><br>";
 
 for($i-=1;$i!=-1;$i--){
-    echo "$array[$i]<br>";
-}*/
+    echo "<span class='zad'>$array[$i]</span><br>";
+}
 
 //задача 3
 
-/*$a=mt_rand(0,2);
+echo "<p class='zad'>Задача 3</p>";
+
+$a=mt_rand(0,2);
 
 $array=['1.jpg','2.jpg','3.jpg'];
 
 
 echo <<<html
-<img src="img/$array[$a]" alt="">
-html;*/
+<img src="img/$array[$a]" alt="" style="height: 20%">
+html;
 
 //задача 4
 
-/*$a=mt_rand(1,5);
+echo "<p class='zad'>Задача 4</p>";
+
+$a=mt_rand(1,5);
 
 $array=[];
 
-$max=0;
+$max=-101;
 $min=101;
 
 for(;$a>0;$a--){
@@ -59,30 +67,32 @@ for(;$a>0;$a--){
     if($array[$a]<$min && $array[$a]>0){
         $min=$array[$a];
     }
-    elseif($array[$a]<$max && $array[$a]>(-101)){
+    elseif($array[$a]<0 && $array[$a]>$max){
         $max=$array[$a];
     }
 }
 
 if($min==101){
-    echo "положительных чисел нет в массиве!<br>";
-    echo "максимальное отрицательное число: " . "$max" . "<br>";
+    echo "<span class='zad'>положительных чисел нет в массиве!</span><br>";
+    echo "<span class='zad'>максимальное отрицательное число: </span>" . "<span class='zad'>$max</span><br>";
 }
 
 elseif($max==0){
-    echo "отрицательных чисел нет в массиве!<br>";
-    echo "минимальное положительное число: " . "$min" . "<br>";
+    echo "<span class='zad'>отрицательных чисел нет в массиве!</span><br>";
+    echo "<span class='zad'>минимальное положительное число: </span>" . "<span class='zad'>$min</span><br>";
 }
 
 elseif ($min!=101 && $max!=0){
-    echo "минимальное положительное число: " . "$min" . "<br>" . "максимальное отрицательное число: " . "$max" . "<br>";
+    echo "<span class='zad'>минимальное положительное число: </span>" . "<span class='zad'>$min</span>" . "<br>" . "<span class='zad'>максимальное отрицательное число: </span>" . "<span class='zad'>$max</span><br>";
 }
 
-print_r($array);*/
+print_r($array);
 
 //Задача 5
 
-/*$array=[
+echo "<p class='zad'>Задача 5</p>";
+
+$array=[
     'Ivanov'=>[
         'mathematics' => 0,
         'physics' => 0,
@@ -125,12 +135,12 @@ $sum=[
 
 
 foreach($array as $key=>$value){
-    echo "<br>$key<br><br>";//фамилия предмет
+    echo "<span class='zad'><br>$key<br><br></span>";//фамилия предмет
 
     foreach($value as $new_key=>$new_value){
         $new_value=mt_rand(2,5);
 
-        echo "$new_key " . "$new_value<br>";//предмет оценка
+        echo "<span class='zad'>$new_key </span>" . "<span class='zad'>$new_value</span><br>";//предмет оценка
         $sum[$new_key]+=$new_value;
     }
 
@@ -139,12 +149,14 @@ foreach($array as $key=>$value){
 foreach ($sum as $key2=>$value2){
     $znam=count($array);
     $sred=$value2/$znam;
-    echo "<br>средняя оценка по предметам в группе:<br>" . "$key2 " . "$sred<br>";
-}*/
+    echo "<br><span class='zad'>средняя оценка по предметам в группе:</span><br>" . "<span class='zad'>$key2 </span>" . "<span class='zad'>$sred</span><br>";
+}
 
 //Задача 6
 
-/*$karib=[
+echo "<p class='zad'>Задача 6</p>";
+
+$karib=[
     'January'=>[
         'kuba'=>0,
         'trinidat'=>0,
@@ -230,10 +242,10 @@ $max_temps_by_month = [];
 
 foreach ($karib as $month => $islands) {
     $max_temp_month = 0;
-    echo "<br>месяц: " . "$month<br>";
+    echo "<br><span class='zad'>месяц: </span>" . "<span class='zad'>$month</span><br>";
     foreach ($islands as $island => $temperature) {
         $new_temperature = mt_rand(200, 400) / 10;
-        echo "$island $new_temperature C<br>";
+        echo "<span class='zad'>$island $new_temperature C</span><br>";
 
         if ($new_temperature > $max_temp[$island]) {
             $max_temp[$island] = $new_temperature;
@@ -245,12 +257,14 @@ foreach ($karib as $month => $islands) {
     }
 
     $max_temps_by_month[$month] = $max_temp_month;
-    echo "Максимальная температура за месяц: $max_temp_month<br>";
-}*/
+    echo "<span class='zad'>Максимальная температура за месяц: $max_temp_month</span><br>";
+}
 
 //Задача 7
 
-/*$tabl=[
+echo "<p class='zad'>Задача 7</p>";
+
+$tabl=[
     1=>[
         1=>mt_rand(1,10),
         2=>mt_rand(1,10),
@@ -345,7 +359,7 @@ echo "</table>";
 
 foreach($max_stolb as $key=>$value){
     echo "максимальное значение столбца: " . "$key" . "=" . "$value<br>";
-}*/
+}
 
 
 ?>
