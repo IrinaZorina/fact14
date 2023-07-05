@@ -23,6 +23,8 @@ if ($currentHour >= 8 && $currentHour < 20) {
             <div class="location"><a class="tabl" href="index.php">Главная</a></div>
             <div class="location"><a class="tabl" href="VerificationTask.php">Таблица</a></div>
             <div class="location1"><a class="tabl" href="training.php">Циклы</a></div>
+            <div class="location1"><a class="tabl" href="array.php">Массивы</a></div>
+            <div class="location1"><a class="tabl" href="string.php">Строки</a></div>
         </section>
 
     </header>

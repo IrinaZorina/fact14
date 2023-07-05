@@ -1,14 +1,14 @@
 <?php require_once 'inc/header.php' ?>
 <main>
-<?php
+    <?php
     $currentHour = date("H");
     if ($currentHour >= 8 && $currentHour < 20) {
         echo '<link rel="stylesheet" href="/StylesTrainig/StyleTrainingDay.css"';
     } else
         echo '<link rel="stylesheet" href="/StylesTraining/TaskTrainingNight.css"';
     ?>
-<p><strong>Задачи на циклы</strong></p>
-<br>
+    <p><strong>Задачи на циклы</strong></p>
+    <br>
     <?php
     echo 'Домашнее задание. Слайд № 25';
     echo '<br>';
@@ -16,8 +16,8 @@
     echo 'Задача № 1. Выведите столбец чисел от 5 до 13.';
     echo '<br>';
     echo '<br>';
-    for($a=5;$a<=13;$a++)
-    echo $a .'<br>';
+    for ($a = 5; $a <= 13; $a++)
+        echo $a . '<br>';
     echo '<br>';
     echo '<br>';
     echo 'Задача № 2. Дано число $num=1000. Делите его на 2 столько раз, пока результат деления не станет меньше 50.
@@ -58,10 +58,10 @@
     <br> Если переменная равна 3, то на экране отображается строка «0, 1, 2, 3, 4, 5, 6, 7» и так далее, до i=10. ';
     echo '<br>';
     echo '<br>';
-    $s = 4; 
-for ($j = 0; $j <= 10 - $s; $j++) {
-    echo $j;
-    }    
+    $s = 4;
+    for ($j = 0; $j <= 10 - $s; $j++) {
+        echo $j;
+    }
     echo '<br>';
     echo '<br>';
     echo 'Задание. Слайд № 23. Дана последовательность, состоящая из дробей: 1/1, 4/2, 7/3, 10/4, ... 
@@ -72,18 +72,18 @@ for ($j = 0; $j <= 10 - $s; $j++) {
     $b = 1;
     $sum = 0;
     $count = 0;
-    $S = 10; 
-    while($sum <= $S){
-    $sum += $a / $b;
-    $a += 3;
-    $b += 1;
-    if ($sum >$S){
-    break;
+    $S = 10;
+    while ($sum <= $S) {
+        $sum += $a / $b;
+        $a += 3;
+        $b += 1;
+        if ($sum > $S) {
+            break;
+        }
+        $count += 1;
     }
     $count += 1;
-    }
-    $count+=1;
-    print("Минимальное количество элементов для превышения суммы" . " " . $S. ":". $count);
+    print("Минимальное количество элементов для превышения суммы" . " " . $S . ":" . $count);
     echo '<br>';
     echo '<br>';
     echo 'Задание. Дана последовательность, состоящая из дробей: 1/1, 3/2, 5/3, 7/4, ... 
@@ -94,18 +94,18 @@ for ($j = 0; $j <= 10 - $s; $j++) {
     $b = 1;
     $sum = 0;
     $count = 0;
-    $S = 10; 
-    while($sum <= $S){
-    $sum += $a / $b;
-    $a += 2;
-    $b += 1;
-    if ($sum >$S){
-    break;
+    $S = 10;
+    while ($sum <= $S) {
+        $sum += $a / $b;
+        $a += 2;
+        $b += 1;
+        if ($sum > $S) {
+            break;
+        }
+        $count += 1;
     }
     $count += 1;
-    }
-    $count+=1;
-    print("Минимальное количество элементов для превышения суммы" . " " . $S. ":". $count);
+    print("Минимальное количество элементов для превышения суммы" . " " . $S . ":" . $count);
     echo '<br>';
     echo '<br>';
     echo 'Задание. Дана последовательность, состоящая из дробей: 1/2, 3/4, 5/6, 7/8, ... 
@@ -116,18 +116,18 @@ for ($j = 0; $j <= 10 - $s; $j++) {
     $b = 1;
     $sum = 0;
     $count = 0;
-    $S = 10; 
-    while($sum <= $S){
-    $sum += $a / $b;
-    $a += 2;
-    $b += 2;
-    if ($sum >$S){
-    break;
+    $S = 10;
+    while ($sum <= $S) {
+        $sum += $a / $b;
+        $a += 2;
+        $b += 2;
+        if ($sum > $S) {
+            break;
+        }
+        $count += 1;
     }
     $count += 1;
-    }
-    $count+=1;
-    print("Минимальное количество элементов для превышения суммы" . " " . $S. ":". $count);
+    print("Минимальное количество элементов для превышения суммы" . " " . $S . ":" . $count);
     echo '<br>';
     echo '<br>';
     echo 'Задание. Дана последовательность, состоящая из дробей: 1/1, 4/2, 9/4, 16/8,... 
@@ -138,10 +138,10 @@ for ($j = 0; $j <= 10 - $s; $j++) {
     $count = 0;
     $S = 10;
     while ($sum <= $S) {
-    $numerator = pow($count + 1, 2);
-    $denominator = pow(2, $count);
-    $sum += $numerator / $denominator;
-    $count++;
+        $numerator = pow($count + 1, 2);
+        $denominator = pow(2, $count);
+        $sum += $numerator / $denominator;
+        $count++;
     }
     echo "Минимальное количество элементов для превышения суммы $S: $count";
     echo '<br>';
@@ -151,101 +151,28 @@ for ($j = 0; $j <= 10 - $s; $j++) {
     <br>Определить минимальное количество слагаемых для вычисления Пи с точностью 0.01';
     echo '<br>';
     echo '<br>';
-    $pi = 0; 
-    $term = 1; 
-    $accuracy = 0.01; 
-    $count = 0; 
-    while (abs($term) >= $accuracy) {
-    $pi += $term; 
-    $count++; 
-    
-    $sign = ($count % 2 == 0) ? -1 : 1;
-    $term = $sign * (1 / ((2 * $count) + 1));
-    }
-    $pi *= 4; 
-    echo "Минимальное количество слагаемых для вычисления числа Пи с точностью 0.01: " . $count . "\n";
-    echo "Вычисленное значение числа Пи: " . $pi;
-    echo '<br>';
-    echo '<br>';
-    echo 'Задание. Дано N действительных случайных чисел в диапазоне от -100 до 100. Найти минимальное положительное число и максимальное отрицательное число.';
-    echo '<br>';
-    echo '<br>';
-    $N = 100; 
-$minPositive = null;
-$maxNegative = null;
-
-for ($i = 0; $i < $N; $i++) {
-    $number = rand(-100, 100);
-
-    if ($number > 0 && ($minPositive === null || $number < $minPositive)) {
-        $minPositive = $number;
-    }
-
-    if ($number < 0 && ($maxNegative === null || $number > $maxNegative)) {
-        $maxNegative = $number;
-    }
-}
-
-echo "Минимальное положительное число: " . $minPositive . "<br>";
-echo "Максимальное отрицательное число: " . $maxNegative . "<br>";
-
-echo '<br>';
-echo '<br>';
-echo 'Задание. Дан двумерный массив из 5 строк и 6 столбцов. 
-Определить для каждого четного столбца максимальный элемент. 
-Найти произведение этих элементов.';
-echo '<br>';
-echo '<br>';
-$array = [];
-for ($i = 0; $i < 5; $i++) {
-    for ($j = 0; $j < 6; $j++) {
-        $array[$i][$j] = rand(1, 100);
-    }
-}
-$product = 1;
-
-for ($j = 0; $j < 6; $j += 2) {
-    $max = $array[0][$j];
-    for ($i = 1; $i < 5; $i++) {
-        if ($array[$i][$j] > $max) {
-            $max = $array[$i][$j];
+    $pi = 0;
+    $Pi = 0;
+    $a = 1;
+    $b = 0;
+    $count = 1;
+    do {
+    if ($count % 2 <> 0) {
+        $b = $b + (1 / $a);
+    } else {
+        $b = $b - (1 / $a);
         }
-    }
-    $product *= $max;
-}
-
-echo "Произведение максимальных элементов четных столбцов: " . $product;
-
-echo '<br>';
-echo '<br>';
-echo 'Задание. Для группы учащихся известны годовые оценки по следующим предметам: математика, физика, химия, информатика.
-Найти среднюю в группе оценку по каждому из предметов. 
-Суммирование оценок по каждому предмету.';
-echo '<br>';
-echo '<br>';
-
-$groupEstimates = [
-    'mathematics' => [5, 4, 4, 5],
-    'physics' => [4, 3, 4, 4],
-    'chemistry' => [3, 5, 3, 5],
-    'informatics' => [5, 4, 5, 3,]
-];
-
-foreach ($groupEstimates as $key => $vail) {
-    $sum = 0; 
-    foreach ($vail as $newvail) {
-        $sum += $newvail; 
-    }
-    $count = count($vail); 
-    $average = $sum / $count; 
-    
-    echo "Средняя оценка по предмету $key: $average<br>";
-}
-echo '<br>';
-echo '<br>';
+        $count++;
+        $a = $a + 2;
+        $pi = 4 * $b;
+        $Pi = round($pi, 2);
+    } while ($Pi <> 3.14);
+echo "Минимальное количество слагаемых: $count";
+echo "<br>";
+echo "<br>";
 
 ?>
 </main>
 
 
-<?php require_once 'inc/footer.php'?>
+<?php require_once 'inc/footer.php' ?>
