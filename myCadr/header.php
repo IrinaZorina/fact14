@@ -10,5 +10,8 @@
         <li nav_bar_item>
             <a href="arrays.php" target="_blank"> Массивы</a>
         </li>
+        <li nav_bar_item>
+            <a href="strings.php" target="_blank"> Строки</a>
+        </li>
     </ol>
 </header>

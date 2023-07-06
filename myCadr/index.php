@@ -6,12 +6,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <!-- <link rel="stylesheet" href="styles/style.css"> -->
     <?php
-    $currentTime=date('H');
-    $dayTime='8';
-    $nightTime='20';
-    if($currentTime>$dayTime && $currentTime<$nightTime){
+    $currentTime = date('H');
+    $dayTime = '8';
+    $nightTime = '20';
+    if ($currentTime > $dayTime && $currentTime < $nightTime) {
         echo '<link rel="stylesheet" href="styles/style.css">';
-    }else{
+    } else {
         echo '<link rel="stylesheet" href="styles/nightStyle.css">';
     }
     ?>
@@ -41,10 +41,11 @@
                     <p>Люблю путешествовать, жарить шашлык, кататься на самокате! Немного бренчу на гитаре и пою, как хор мартовских котов!
                 </div>
                 <div class="comment">
-                    <p>Курс нравится! Очень понравился опыт разделения на команды! Поначалу показалось, что практики маловато. 
+                    <p>Курс нравится! Очень понравился опыт разделения на команды! Поначалу показалось, что практики маловато.
                         Но на деле задания дают такие, что порой приходится часами писать и переписывать код,
                         гуглить инфу!
                     <p>Говорят, что это и есть работа программиста, так как знать всего невозможно, а уметь находить решения задачи надо!
+                
                 </div>
             </div>
         </div>
@@ -109,10 +110,18 @@
             <div class="image_text">Aerial View of the Johnson Space Center</div>
         </div>
     </div>
-<!-- =====================FOOTER====================== -->
-<?php
-include "footer.php";
-?>
+    <p> Мой возраст
+        <?php
+        $birthday = "04-12-1984";
+        $oldDate = strtotime($birthday);
+        $currentDate = time();
+        $diff = $currentDate - $oldDate;
+        echo floor($diff / (60 * 60 * 24)) . " дня.";
+        ?>
+        <!-- =====================FOOTER====================== -->
+        <?php
+        include "footer.php";
+        ?>
 </body>
 
-</html>
+</html>";
