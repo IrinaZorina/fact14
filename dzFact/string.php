@@ -110,13 +110,13 @@ elseif($a<=5){
 
 echo "<p class='zad'>Задача 9</p>";
 
-/*$str='Clearly, the key features of the project structure, initiated exclusively synthetically, have been subjected to a whole series of independent studies.';
+$str='Clearly, the key features of the project structure, initiated exclusively synthetically, have been subjected to a whole series of independent studies.';
 
 $str2=str_replace('a', '1',$str);
 $str3=str_replace('b', '2',$str2);
 $str4=str_replace('c', '3',$str3);
 
-echo $str4;*/
+echo "<span>$str4</span>";
 
 //10
 

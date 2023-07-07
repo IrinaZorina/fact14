@@ -1,34 +1,8 @@
 <?php
 
-//тема!!!<
-
-$dateNum=date('G');
-
-$Num=(int)$dateNum;
-
-if(8<=$Num && $Num<20){
-    echo <<<html
-
-<link rel="stylesheet" href="styles/style_index_day.css">
-
-html;
-
-}
-else{
-    echo <<<html
-
-<link rel="stylesheet" href="styles/style_index_night.css">
-
-html;
-
-}
-
-echo $Num;
-
-//тема!!!>
-
-
-
+//тема!!!
+require_once "inc/GlobalFunctions.php";
+theme();
 
 ?>
 

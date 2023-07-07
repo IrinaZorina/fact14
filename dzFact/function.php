@@ -4,13 +4,13 @@
 
 //1
 
-echo 'задача 1<br><br>';
+echo '<span class="zad">задача 1<br><br></span>';
 
 $val1=mt_rand(0,10);
 $val2=mt_rand(0,10);
 
-echo 'a= ' . $val1 . '<br>';
-echo 'b= ' . $val2 . '<br>';
+echo '<span class="zad">a= $val1<br></span>';
+echo '<span class="zad">b= $val2<br></span>';
 
 function srav($a, $b){
     if($a>$b){
@@ -25,17 +25,17 @@ function srav($a, $b){
 
 }
 
-echo srav($val1, $val2);
+echo '<span class="zad">srav($val1, $val2)</span>';
 
 //2
 
-echo '<br><br>задача 2<br><br>';
+echo '<br><br><span class="zad">задача 2</span><br><br>';
 
 $val1=mt_rand(0,10);
 $val2=mt_rand(0,10);
 
-echo 'a= ' . $val1 . '<br>';
-echo 'b= ' . $val2 . '<br>';
+echo '<span class="zad">a= $val1</span><br>';
+echo '<span class="zad">b= $val2</span><br>';
 $c=0;
 
 function katet($a, $b){
@@ -43,11 +43,11 @@ function katet($a, $b){
     return $c;
 }
 
-echo katet($val1, $val2);
+echo "<span class='zad'>" . katet($val1, $val2) . "</span>";
 
 //3
 
-echo '<br><br>задача 3<br><br>';
+echo '<br><br><span class="zad">задача 3</span><br><br>';
 
 $val1=10;
 
@@ -55,9 +55,9 @@ function uvelich($a){
     $i=0;
     do{
         $a*=10;
-        echo "$a<br>";
+        echo "<span class='zad'>$a</span><br>";
         if($a>1000000){
-            echo "вы достигли предела";
+            echo "<span class='zad'>вы достигли предела</span>";
             break;
         }
         $i++;
@@ -65,9 +65,11 @@ function uvelich($a){
     while($i<10);
 }
 
+uvelich($val1);
+
 //4
 
-echo '<br><br>задача 4<br><br>';
+echo '<br><br><span class="zad">задача 4</span><br><br>';
 
 function mass($arr){
     print_r($arr);
@@ -79,11 +81,11 @@ for($i=0;$i<mt_rand(3,5);$i++){
     $array[$i]=mt_rand(5,10);
 }
 
-echo mass($array);
+echo "<span class='zad'>" . mass($array) . "</span>";
 
 //5
 
-echo '<br><br>задача 5<br><br>';
+echo "<br><br><span class='zad'>задача 5</span><br><br>";
 
 function mass2($arr){
     $c=0;
@@ -100,17 +102,17 @@ for($i=0;$i<mt_rand(3,5);$i++){
     $array[$i]=mt_rand(5,10);
 }
 
-echo mass2($array);
+echo "<span class='zad'>" . mass2($array) . "</span>";
 
 //6
 
-echo '<br><br>задача 6<br><br>';
+echo '<br><br><span class="zad">задача 6</span><br><br>';
 
 $b=0;
 
 function stroka($a){
     $b=explode(' ', $a);
-    echo count($b);
+    echo "<span class='zad'>" . count($b) . "</span>";
 }
 
 $strochka='Задача организации, в особенности же постоянный количественный рост и сфера нашей активности требуют определения и уточнения модели развития. ';
@@ -119,26 +121,17 @@ stroka($strochka);
 
 //7
 
-echo '<br><br>задача 7<br><br>';
+echo '<br><br><span class="zad">задача 7</span><br><br>';
 
 //8
 
-echo '<br><br>задача 8<br><br>';
+echo '<br><br><span class="zad">задача 8</span><br><br>';
 
 $array=[];
 
 for($i=0;$i<mt_rand(2,10);$i++){
     $array[$i]=0;
 }
-
-/*print_r($array);
-echo "<br>";
-
-for($i=0;$i<count($array);$i++){
-    $array[$i]=mt_rand(10,15);
-}
-
-print_r($array);*/
 
 function mass4($a){
     for($i=0;$i<count($a);$i++){
@@ -154,32 +147,32 @@ print_r($b);
 
 //9
 
-echo '<br><br>задача 9<br><br>';
+echo '<br><br><span class="zad">задача 9</span><br><br>';
 
 $a='HTML, CSS, PHP, BITRIX';
 
-echo "$a" . "<br>";
+echo "<span class='zad'>" . $a . "</span><br>";
 
 function chislo($d){
     $c=explode(' ', $d);
     $chislo=count($c);
-    echo "Число слов в строке: " . "$chislo";
+    echo "<span class='zad'>Число слов в строке: " . $chislo . "</span>";
 }
 
 chislo($a);
 
 //10
 
-echo '<br><br>задача 10<br><br>';
+echo '<br><br><span class="zad">задача 10</span><br><br>';
 
 $b='HTML, CSS, PHP, BITRIX';
 
-echo "$b" . "<br>";
+echo '<span class="zad">' . $b . '</span><br>';
 
 function revers($a){
     $z=str_split($a);
     for($i=count($z);$i!=-1;$i--){
-        echo $a[$i];
+        echo '<span class="zad">' . $a[$i] . '</span>';
     }
 }
 
@@ -187,26 +180,26 @@ revers($b);
 
 //11
 
-echo '<br><br>задача 11<br><br>';
+echo '<br><br><br><br><span class="zad">задача 11</span><br><br>';
 
 $b='HTML, CSS, PHP, BITRIX';
 
-echo "$b" . "<br>";
+echo '<span class="zad">' . $b . '</span><br>';
 
 function dlinaStoki($a){
     $c=mb_strlen($a);
-    echo "Длина строки: " . "$c";
+    echo "<span class='zad'>Длина строки: " . $c . "</span>";
 }
 
 dlinaStoki($b);
 
 //12
 
-echo '<br><br>задача 12<br><br>';
+echo '<br><br><span class="zad">задача 12</span><br><br>';
 
 $b='HTML, CSS, PHP, BITRIX';
 
-echo "$b" . "<br><br>";
+echo "<span class='zad'>" . $b . "</span><br><br>";
 
 function newStroka($a){
     $c=str_split($a);
@@ -214,7 +207,7 @@ function newStroka($a){
     $str=implode('',$c);
     $c=str_split($str);
     for($i=0;$i<count($c);$i++){
-        echo $c[$i] . "<br>";
+        echo "<span class='zad'>" . $c[$i] . "</span><br>";
     }
 }
 
