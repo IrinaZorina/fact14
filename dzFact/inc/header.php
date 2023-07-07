@@ -58,6 +58,7 @@ echo $Num;
 					<li class="menu"><a class="menu_text" href="http://dzfact/dzFact/cycles.php">Циклы</a></li>
 					<li class="menu"><a class="menu_text" href="http://dzfact/dzFact/array.php">Массивы</a></li>
 					<li class="menu"><a class="menu_text" href="http://dzfact/dzFact/string.php">Строки</a></li>
+                    <li class="menu"><a class="menu_text" href="http://dzfact/dzFact/function.php">Функции</a></li>
 				</ul>
 
 			</div>
