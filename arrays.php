@@ -65,10 +65,6 @@
 
     <?php
 
-    $sum_math = $sum_phys = $sum_chem = $sum_info = 0;
-
-    $average_math = $average_phys = $average_chem = $average_info = 0;
-
     $arr = [
         'Математика' => [
             'Назаров' => mt_rand(2, 5),
@@ -100,34 +96,14 @@
         ]
     ];
 
-    // echo '<pre>';
-    // print_r($arr);
-    // echo '</pre>';
-
-    foreach ($arr['Математика'] as $value) {
-        $sum_math += $value;
+    foreach ($arr as $key => $value) {
+        $sum = 0;
+        foreach ($value as $new_key => $new_value) {
+            $sum += $new_value;
+        }
+        $average = $sum / count($value);
+        echo 'Сумма по ' . $key . ' = ' . $sum . '. Среднее: ' . $average . '<br>';
     }
-    $average_math = $sum_math / count($arr['Математика']);
-
-    foreach ($arr['Физика'] as $value) {
-        $sum_phys += $value;
-    }
-    $average_phys = $sum_phys / count($arr['Физика']);
-
-    foreach ($arr['Химия'] as $value) {
-        $sum_chem += $value;
-    }
-    $average_chem = $sum_chem / count($arr['Химия']);
-
-    foreach ($arr['Информатика'] as $value) {
-        $sum_info += $value;
-    }
-    $average_info = $sum_info / count($arr['Информатика']);
-
-    echo 'Сумма оценок по математике: ' . $sum_math . '. Средняя оценка: ' . $average_math . '<br>';
-    echo 'Сумма оценок по физике: ' . $sum_phys . '. Средняя оценка: ' . $average_phys . '<br>';
-    echo 'Сумма оценок по химии: ' . $sum_chem . '. Средняя оценка: ' . $average_chem . '<br>';
-    echo 'Сумма оценок по информатике: ' . $sum_info . '. Средняя оценка: ' . $average_info . '<br>';
 
     ?><br>
 
@@ -159,34 +135,16 @@
         ]
     ];
 
-    foreach ($arr['Июнь'] as $value) {
-        if ($value > $max_jun) {
-            $max_jun = $value;
+    foreach ($arr as $key => $value) {
+        $max = 0;
+        foreach ($value as $new_key => $new_value) {
+            if ($new_value > $max) {
+                $max = $new_value;
+            }
         }
+        // echo 'Сумма по ' . $key . ' = ' . $sum . '. Среднее: ' . $average . '<br>';
+        echo 'Максимальная температура для ' . $key . ' = ' . $max . '<br>';
     }
-
-    foreach ($arr['Июль'] as $value) {
-        if ($value > $max_jul) {
-            $max_jul = $value;
-        }
-    }
-
-    foreach ($arr['Август'] as $value) {
-        if ($value > $max_aug) {
-            $max_aug = $value;
-        }
-    }
-
-    $new_arr['Июнь'] = $max_jun;
-    $new_arr['Июль'] = $max_jul;
-    $new_arr['Август'] = $max_aug;
-
-    // echo '<pre>';
-    // print_r($arr);
-    // echo '</pre>';
-    // echo '<pre>';
-    // print_r($new_arr);
-    // echo '</pre>';
 
     ?><br>
 
@@ -205,27 +163,28 @@
     }
 
     echo '<br>';
-    // echo '<pre>';
-    // print_r($arr);
-    // echo '</pre>';
-
-    // неправильно, не пойму как!
 
     $column = [];
-    foreach ($arr as $key => $value) {
-        if ($key % 2 == 0) {
-            foreach ($value as $item) {
-                if ($item < $max) {
-                    $max = $item;
+    $product = 1;
+    for ($j = 1; $j < 7; $j++) {
+        if ($j % 2 == 0) {
+            $max = $arr[$j][1];
+            for ($i = 1; $i < 6; $i++) {
+                if ($arr[$j][$i] > $max) {
+                    $max = $arr[$j][$i];
                 }
             }
             $column[] = $max;
+            $product *= $max;
         }
     }
 
-    echo '<pre>';
-    print_r($column);
-    echo '</pre>';
+    echo "Максимальные элементы в четных столбцах: ";
+    foreach ($column as $value) {
+        echo $value . ' ';
+    }
+    echo "<br>";
+    echo "Произведение этих элементов: " . $product;
     ?>
 </main>
 <?php require_once 'inc/footer.php'; ?>
