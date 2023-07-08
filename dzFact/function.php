@@ -123,6 +123,30 @@ stroka($strochka);
 
 echo '<br><br><span class="zad">задача 7</span><br><br>';
 
+function fibonachi($a){
+    if($a==0){
+        return 0;
+    }
+    elseif($a==1){
+        return 1;
+    }
+    else{
+        $b=1;
+        $fib=0;
+        $stat=$a;
+        while($a!=0){
+            $fib+=$stat-$b;
+            $a--;
+            $b++;
+        }
+        return $fib;
+    }
+}
+
+$chislo=3;
+
+echo "<span class='zad'>" . fibonachi($chislo) . "</span>";
+
 //8
 
 echo '<br><br><span class="zad">задача 8</span><br><br>';
@@ -171,7 +195,7 @@ echo '<span class="zad">' . $b . '</span><br>';
 
 function revers($a){
     $z=str_split($a);
-    for($i=count($z);$i!=-1;$i--){
+    for($i=count($z)-1;$i>-1;$i--){
         echo '<span class="zad">' . $a[$i] . '</span>';
     }
 }
