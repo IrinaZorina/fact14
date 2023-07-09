@@ -43,35 +43,14 @@
                         маловато.
                         Но на деле задания дают такие, что порой приходится часами писать и переписывать код,
                         гуглить инфу!";
-                        $str = strip_tags($text);
-                        $arr = explode(" ", $str);
-                        $count = 0;
-                        // print_r($arr);
-                        for ($i = 0; $i < count($arr); $i++) {
-                            if ($count % 2 == 0) {
-                                echo "$arr[$i]<span style='color:orange'</span> ";
-                            } else {
-                                echo "$arr[$i]<span style='color:blue'</span> ";
-                            }
-                            $count++;
-                        }
+                        require_once "../customFunc/paintWords.php";
+                        paintWords($text, "orange", "blue");
                         ?>
                     <p>
                         <?php
                         $text = " Говорят, что это и есть работа программиста, так как знать всего невозможно, а уметь находить
                         решения задачи надо!";
-                        $str = strip_tags($text);
-                        $arr = explode(" ", $str);
-                        $count = 0;
-                        // print_r($arr);
-                        for ($i = 0; $i < count($arr); $i++) {
-                            if ($count % 2 == 0) {
-                                echo "$arr[$i]<span style='color:orange'</span> ";
-                            } else {
-                                echo "$arr[$i]<span style='color:blue'</span> ";
-                            }
-                            $count++;
-                        }
+                        paintWords($text, "red", "lime");
                         ?>
                 </div>
             </div>
