@@ -5,20 +5,19 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <?php
+    function siteTheme() {
         $CurrentTime = date("H:i:s");
         $NightTimeStyle = "20:00:00";
         $DayTimeStyle = "08:00:00";
-    
         if ($CurrentTime >= $NightTimeStyle or $CurrentTime < $DayTimeStyle) 
-/*         Ночь */
         {
-            echo '<link rel="stylesheet" href="./css/style_day.css">';
+            echo '<link rel="stylesheet" href="./css/style_day.css">';  // Ночь
         } 
-/*         День */
-        else 
-        {
-            echo '<link rel="stylesheet" href="./css/style_night.css">';
-        }
+        else {
+            echo '<link rel="stylesheet" href="./css/style_night.css">'; // День
+        } 
+    }
+    siteTheme();
     ?>
 </head>
 <body>
@@ -32,21 +31,26 @@
                 <a href="table.html" target="_blank">Ссылка на таблицу Менделеева</a>
                 <!-- Высчитываем гласные буквы -->
                 <?php
-                $url = "index.php";
-                $text = file_get_contents($url);
-                // Определяем регулярное выражение для поиска гласных букв
-                $pattern = "/[аеёиоуыэюяaeiou]/i";
-
-                // Подсчитываем количество гласных букв в тексте
-                $count = preg_match_all($pattern, $text, $matches);
-
-                // Выводим количество гласных букв
-                echo "<br >Количество гласных букв: $count <br>";
+                function countVowels() {
+                    $url = "index.php";
+                    $text = file_get_contents($url);
+                    // Определяем регулярное выражение для поиска гласных букв
+                    $pattern = "/[аеёиоуыэюяaeiou]/i";
+                    // Подсчитываем количество гласных букв в тексте
+                    $count = preg_match_all($pattern, $text, $matches);
+                    // Выводим количество гласных букв
+                    echo "<br >Количество гласных букв: $count <br>";
+                    };
+                    countVowels();
+                function BDayTillNow() {
                 $x = "1988-05-31";
                 $now = time(); // текущее время (метка времени)
                 $your_date = strtotime($x); // какая-то дата в строке (1 января 2017 года)
                 $datediff = $now - $your_date; // получим разность дат (в секундах)
-                echo "Прошло времени в днях: " .floor($datediff / (60 * 60 * 24)); // вычислим количество дней из разности дат
+                echo "Прошло времени в днях: " .floor($datediff / (60 * 60 * 24));// вычислим количество дней из разности дат
+                echo "<br>"; 
+                }
+                BDayTillNow();
                 ?>
             </nav>
         </header>
@@ -64,21 +68,18 @@
                     <!-- О себе -->
                 <div class="about container">
                     <?php
+                    /* Окрашиваем первую фразу в красный цвет */
                     $text = "Доброго дня! Я начинаю путь в новое для себя направление веб-разработки и хочу рассказать о том, чем занимаюсь последние годы:";
-                    
-                    // Разбиваем текст на предложения
-                    $sentences = preg_split('/(?<=[.?!])\s+/', $text);
-                    
-                    // Окрашиваем первую фразу в красный цвет
-                    $firstSentence = "<span style='color: #BC2041;'>{$sentences[0]}</span>";
-                    
-                    // Выводим текст с окрашенной первой фразой
-                    echo "$firstSentence ";
-                    
+                    function RedFirstPhrase($text) {
+                    $sentences = preg_split('/(?<=[.?!])\s+/', $text);// Разбиваем текст на предложения
+                    $firstSentence = "<span style='color: #BC2041;'>{$sentences[0]}</span>";// Окрашиваем первую фразу в красный цвет
+                    echo "$firstSentence ";// Выводим текст с окрашенной первой фразой
                     // Выводим остальные предложения
                     for ($i = 1; $i < count($sentences); $i++) {
                         echo $sentences[$i];
+                        }
                     }
+                    RedFirstPhrase($text);
                     ?>
                     
                     <ul>
@@ -87,7 +88,6 @@
                         <li>Очень люблю путешествовать и узнавать новые культуры. Этой весной мне удалось прожить полтора месяца во Вьетнаме и окунуться в колорит юго-восточной Азии.</li>
                         <li>Программирование изучаю с осени 2022 года и надеюсь в дальнейшем сделать его своим основным видом деятельности.</li>
                     </ul>
-
                 </div>
                 <!-- что понравилось -->
                 <div class="like container">
@@ -97,10 +97,10 @@
                 Сразу чувствуется открытая и светлая энергетика, которая никого не оставит равнодушным. <br>
                 Так же стоит отметить ее внимание и готовность помочь каждому ученику, что позволяет чувствовать себя важным элементом нашей небольшой команды. <br>
                 Надеюсь, что и последующие уроки будут проходить так же комфортно, а материал усваиваться легко и быстро.";
-
+                /* Окрасить четные и нечетные слова в разный текст */
+                function textColoring($text) {
                 // Разбиваем текст на слова
                 $words = explode(" ", $text);
-
                 // Окрашиваем каждое четное слово в один цвет, а каждое нечетное слово в другой цвет
                 for ($i = 0; $i < count($words); $i++) {
                     if ($i % 2 == 0) {
@@ -109,9 +109,10 @@
                         $words[$i] = "<span style='color: #9E8279;'>{$words[$i]}</span>";
                     }
                 }
-
                 // Выводим текст с окрашенными словами
                 echo implode(" ", $words);
+                }
+                textColoring($text)
                 ?>
                 </div>
             </div>
