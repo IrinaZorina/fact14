@@ -5,14 +5,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <?php
-    $currentTime=date('H');
-    $dayTime='8';
-    $nightTime='20';
-    if($currentTime>$dayTime && $currentTime<$nightTime){
-        echo '<link rel="stylesheet" href="styles/style.css">';
-    }else{
-        echo '<link rel="stylesheet" href="styles/nightStyle.css">';
-    }
+    include "../customFunc/changeTheme.php";
+    changeTheme();
     ?>
     <title>Strings</title>
 </head>
@@ -93,13 +87,14 @@ include "header.php";
         Если же в этой строке 5 и менее символов - необходимо вывести эту строку на экран.
         <?php
         echo "<br>";
+        // $str="1234";
         $str = "Уровень безработицы в России достиг исторического минимума.";
         $strEnd = "...";
         $newStr = "";
         $arr = mb_str_split($str);
         for ($i = 0; $i < count($arr); $i++) {
             if (mb_strlen($str) > 5) {
-                $newStr = mb_substr($str, 6, -3) . $strEnd;
+                $newStr = mb_substr($str, 0, 5) . $strEnd;
             } else {
                 $newStr = $str;
             }
@@ -123,7 +118,7 @@ include "header.php";
         /* Я не знаю какой правильнее.
          По сути мы заменяем символы строки, и логично разбить строку на массив символов и обойти их в цикле.
         С другой стороны есть готовая функция,меняющая один список символов на другой прям в строке
-        Нужна пояснительная бригада)))))*/
+        Нужна пояснительная бригада))*/
         ?>
 
     <p>ЗАДАЧА. Дана строка 'abc abc abc'. Определите позицию последней буквы 'b'.

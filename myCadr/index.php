@@ -4,16 +4,10 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <!-- <link rel="stylesheet" href="styles/style.css"> -->
+    <link rel="stylesheet" href="styles/style.css">
     <?php
-    $currentTime = date('H');
-    $dayTime = '8';
-    $nightTime = '20';
-    if ($currentTime > $dayTime && $currentTime < $nightTime) {
-        echo '<link rel="stylesheet" href="styles/style.css">';
-    } else {
-        echo '<link rel="stylesheet" href="styles/nightStyle.css">';
-    }
+    require "../customFunc/changeTheme.php";
+    changeTheme();
     ?>
     <title>My Card</title>
 </head>
@@ -36,16 +30,49 @@
                 <div class="info">
                     <p>Всем привет! Мне 38 лет. Работал в разных сферах. Последние 2 года работаю на производстве
                         и пытаюсь изучать программирование.
-                    <p>Никогда не думал, что писать команды машине окажется для меня увлекательным занятием. В процессе самостоятельного
+                    <p>Никогда не думал, что писать команды машине окажется для меня увлекательным занятием. В процессе
+                        самостоятельного
                         обучения понял, что люблю сразу видеть на экране или браузере результат работы своего кода.
-                    <p>Люблю путешествовать, жарить шашлык, кататься на самокате! Немного бренчу на гитаре и пою, как хор мартовских котов!
+                    <p>Люблю путешествовать, жарить шашлык, кататься на самокате! Немного бренчу на гитаре и пою, как
+                        хор мартовских котов!
                 </div>
                 <div class="comment">
-                    <p>Курс нравится! Очень понравился опыт разделения на команды! Поначалу показалось, что практики маловато.
+                    <p>
+                        <?php
+                        $text = " Курс нравится! Очень понравился опыт разделения на команды! Поначалу показалось, что практики
+                        маловато.
                         Но на деле задания дают такие, что порой приходится часами писать и переписывать код,
-                        гуглить инфу!
-                    <p>Говорят, что это и есть работа программиста, так как знать всего невозможно, а уметь находить решения задачи надо!
-                
+                        гуглить инфу!";
+                        $str = strip_tags($text);
+                        $arr = explode(" ", $str);
+                        $count = 0;
+                        // print_r($arr);
+                        for ($i = 0; $i < count($arr); $i++) {
+                            if ($count % 2 == 0) {
+                                echo "$arr[$i]<span style='color:orange'</span> ";
+                            } else {
+                                echo "$arr[$i]<span style='color:blue'</span> ";
+                            }
+                            $count++;
+                        }
+                        ?>
+                    <p>
+                        <?php
+                        $text = " Говорят, что это и есть работа программиста, так как знать всего невозможно, а уметь находить
+                        решения задачи надо!";
+                        $str = strip_tags($text);
+                        $arr = explode(" ", $str);
+                        $count = 0;
+                        // print_r($arr);
+                        for ($i = 0; $i < count($arr); $i++) {
+                            if ($count % 2 == 0) {
+                                echo "$arr[$i]<span style='color:orange'</span> ";
+                            } else {
+                                echo "$arr[$i]<span style='color:blue'</span> ";
+                            }
+                            $count++;
+                        }
+                        ?>
                 </div>
             </div>
         </div>
@@ -105,18 +132,26 @@
 
         <div class="image_block">
             <div class="image">
-                <img src="image/Aerial_View_of_the_Johnson_Space_Center.jpg" alt="Aerial_View_of_the_Johnson_Space_Center" />
+                <img src="image/Aerial_View_of_the_Johnson_Space_Center.jpg"
+                    alt="Aerial_View_of_the_Johnson_Space_Center" />
             </div>
             <div class="image_text">Aerial View of the Johnson Space Center</div>
         </div>
     </div>
     <p> Мой возраст
         <?php
-        $birthday = "04-12-1984";
-        $oldDate = strtotime($birthday);
-        $currentDate = time();
-        $diff = $currentDate - $oldDate;
-        echo floor($diff / (60 * 60 * 24)) . " дня.";
+        require "../customFunc/countDays.php";
+        countDays("04-12-1984");
+        ?>
+    <p>Количество гласных букв на странице =
+        <?php
+        require "../customFunc/countVowels.php";
+        countVowels('index.php');
+        ?>
+    <p>Количество слов на странице =
+        <?php
+        require "../customFunc/countWords.php";
+        countWords('index.php');
         ?>
         <!-- =====================FOOTER====================== -->
         <?php

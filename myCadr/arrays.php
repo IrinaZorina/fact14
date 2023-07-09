@@ -6,14 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- <link rel="stylesheet" href="styles/style.css"> -->
     <?php
-    $currentTime=date('H');
-    $dayTime='8';
-    $nightTime='20';
-    if($currentTime>$dayTime && $currentTime<$nightTime){
-        echo '<link rel="stylesheet" href="styles/style.css">';
-    }else{
-        echo '<link rel="stylesheet" href="styles/nightStyle.css">';
-    }
+    include "../customFunc/changeTheme.php";
+    changeTheme();
     ?>
     <title>Arrays</title>
 </head>
@@ -101,7 +95,7 @@
         $N = 20;
         $randomArr = [];
         $minPositive = 100;
-        $maxNegative = -1;
+        $maxNegative = -100;
         // Заполняем массив
         echo "Рандомный массив  = ";
         for ($i = 0; $i < $N; $i++) {
@@ -113,7 +107,7 @@
         for ($i = 0; $i < count($randomArr); $i++) {
             if ($randomArr[$i] < $minPositive && $randomArr[$i] > 0) {
                 $minPositive = $randomArr[$i];
-            } elseif ($randomArr[$i] < $maxNegative) {
+            } elseif ($randomArr[$i] > $maxNegative && $randomArr[$i] < 0) {
                 $maxNegative = $randomArr[$i];
             }
         }
