@@ -65,20 +65,20 @@
 
     <?php
 
-    function randArr($arr, $n)
+    function randArr($n)
     {
+        $arr = [];
         for ($i = 0; $i < $n; $i++) {
             $arr[$i] = mt_rand(0, 9);
             echo $arr[$i] . ' ';
         }
+        // echo '<pre>';
+        // print_r($arr);
+        // echo '</pre>';
     }
 
-    $arr = [];
-    $n = 5;
-    randArr($arr, $n);
-    // echo '<pre>'; // показывает пустой массив, проверить после
-    // print_r($arr);
-    // echo '</pre>';
+    $n = 10;
+    randArr($n);
     echo '<br>' . '<br>';
 
     ?>
@@ -133,15 +133,14 @@
     // {
     //     if ($i == 0) {
     //         return 0;
-    //     }
-    //     if ($i == 1 or $i == 2) {
+    //     } elseif ($i == 1 or $i == 2) {
     //         return 1;
     //     } else {
-    //         return ($i - 1) + ($i - 2);
+    //         return fibo($i - 1) + fibo($i - 2);
     //     }
     // }
 
-    // $fibonachi = fibo(5);
+    // $fibonachi = fibo(8);
     // echo $fibonachi . '<br>';
     // echo '<br>';
 
