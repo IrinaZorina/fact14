@@ -7,11 +7,9 @@
     <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <?php
+require "custom_function.php";
 $currentHour = date("H");
-if ($currentHour >= 8 && $currentHour < 20) {
-    echo '<link rel="stylesheet" href="/StylesTest/stylesSun.css"';
-} else
-    echo '<link rel="stylesheet" href="/StylesTest/stylesNight.css">';
+hour($currentHour);
 ?>
     <title></title>
 </head>
@@ -25,6 +23,7 @@ if ($currentHour >= 8 && $currentHour < 20) {
             <div class="location1"><a class="tabl" href="training.php">Циклы</a></div>
             <div class="location1"><a class="tabl" href="array.php">Массивы</a></div>
             <div class="location1"><a class="tabl" href="string.php">Строки</a></div>
+            <div class="location1"><a class="tabl" href="function.php">Функции</a></div>
         </section>
 
     </header>

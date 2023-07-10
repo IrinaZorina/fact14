@@ -1,19 +1,9 @@
 <?php require_once 'inc/header.php' ?>
-<?php
-$currentHour = date("H");
-if ($currentHour >= 8 && $currentHour < 20) {
-    echo '<link rel="stylesheet" href="/StylesTest/stylesSun.css"';
-} else
-    echo '<link rel="stylesheet" href="/StylesTest/stylesNight.css">';
-?>
 <main>
-<?php $date1 = '25-09-1988';
+<?php 
+    $date1 = '25-09-1988';
     $date2 = '05-07-2023';
-    $datetime1 = new DateTime($date1);
-    $datetime2 = new DateTime($date2);
-    $interval = $datetime1->diff($datetime2);
-    $days = $interval->days;
-    echo " $date1 - дата рождения, $date2 - текущее значение, разность: $days";
+    custom_date($date1,$date2);
     ?>
     <section class="conteaner">
         <div class="images"></div>
@@ -24,8 +14,7 @@ if ($currentHour >= 8 && $currentHour < 20) {
             ФАЗА”. Люблю путешествовать, обожаю горы, часто выезжаю на трекинг. Интересуюсь восточной культурой и
             философией, занимаюсь йогой. После окончания курсов планирую переехать в Москву для работы в офисе нашей
             компании программистом.';
-            $arrAboutMe = explode('.', $aboutMy);
-            echo str_replace([$arrAboutMe[0]],["<span style ='color:red'>".$arrAboutMe[0]."</span>"],$aboutMy);
+            color_about_me($aboutMy);
             ?>
             </div>
         <div class="myOpinion">
@@ -33,15 +22,7 @@ if ($currentHour >= 8 && $currentHour < 20) {
             $myOpinion = 'Мнение о курсе сложно составить по одному уроку, на данный момент могу отметить
             небольшое количество учащихся, что позволит проработать индивидуально ошибки. Так же понравился формат
             обучения и внимательность преподавателя к каждому человеку, заставляет включаться активнее в процесс.';
-            $words = explode(" ", $myOpinion);
-            
-            foreach ($words as $key => $word) {
-                if (($key+1) % 2 == 0) {
-                    echo "<span style='color: orange'>" . $word . "</span> ";
-                } else {
-                    echo "<span style='color: rgb(162 157 165)'>" . $word . "</span> ";
-                }
-            }
+            color_myOpinion($myOpinion);
             ?>
         </div>
     </section>
