@@ -40,6 +40,10 @@
                 <a href="arrays.php" class="item">Массивы</a>
                 <a href="strings.php" class="item">Строки</a>
                 <a href="function.php" class="item">Функции</a>
+                <a href="getpost.php" class="item">GET/POST</a>
             </nav>
+            <div class="wow nav">
+                <a href="login.php" class="item">Авторизация</a>
+            </div>
         </div>
     </header>

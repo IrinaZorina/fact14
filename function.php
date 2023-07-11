@@ -129,20 +129,20 @@
 
     <?php
 
-    // function fibo($i)
-    // {
-    //     if ($i == 0) {
-    //         return 0;
-    //     } elseif ($i == 1 or $i == 2) {
-    //         return 1;
-    //     } else {
-    //         return fibo($i - 1) + fibo($i - 2);
-    //     }
-    // }
+    function fibo($i)
+    {
+        if ($i == 0) {
+            return 0;
+        } elseif ($i == 1) {
+            return 1;
+        } else {
+            return fibo($i - 1) + fibo($i - 2);
+        }
+    }
 
-    // $fibonachi = fibo(8);
-    // echo $fibonachi . '<br>';
-    // echo '<br>';
+    $fibonachi = fibo(12);
+    echo $fibonachi . '<br>';
+    echo '<br>';
 
     ?>
 

@@ -165,14 +165,14 @@ a{
     background-image: url("../images/author4.jpg");
 }
 form{
-    font-size: 30px;
+    font-size: 20px;
 }
 .input-text{
-    border: 1px solid green;
-    font-size: 30px;
+    border: 1px solid #ff6e6c;
+    font-size: 20px;
 }
 table, td{
-    border: 3px solid green;
+    border: 3px solid #ff6e6c;
     border-collapse: collapse;
     font-size: 30px;
     width: 700px;
@@ -217,6 +217,14 @@ table, td{
 .d{
     grid-area: d;
     font-size: 20px;
+}
+.login-form{
+    display: grid;
+    grid-template-columns: 300px 300px;
+    grid-template-rows: 1fr;
+    grid-gap: 10px;
+    justify-content: center;
+    justify-items: center;
 }
 
 @media screen and (min-width: 650px) and (max-width: 1650px){
