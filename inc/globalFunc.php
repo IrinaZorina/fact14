@@ -77,3 +77,12 @@ function words($str)
     // print_r($words);
     echo 'Слова: ' . count($words);
 }
+
+function theme($time)
+{
+    if ($time > 7 and $time <= 19) {
+        echo "<link rel='stylesheet' href='styles/styles_day.css'>";
+    } else {
+        echo '<link rel="stylesheet" href="styles/styles_night.css">';
+    }
+}

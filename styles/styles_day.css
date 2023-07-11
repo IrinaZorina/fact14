@@ -14,6 +14,9 @@ a{
     justify-content: space-between;
     margin: 10px;
 }
+.flex-2{
+    flex-grow: 1;
+}
 .logo{
     background-image: url("../images/logo.png");
     width: 200px;
@@ -167,11 +170,14 @@ form{
     font-size: 20px;
 }
 .input-text{
-    border: 1px solid #ff6e6c;
+    border: 1px solid #f3d2c1;
     font-size: 20px;
+    font-family: "PT Sans", serif;
+    padding: 3px;
+    margin: 3px;
 }
 table, td{
-    border: 3px solid #ff6e6c;
+    border: 3px solid #f3d2c1;
     border-collapse: collapse;
     font-size: 30px;
     width: 700px;
@@ -224,6 +230,13 @@ table, td{
     grid-gap: 10px;
     justify-content: center;
     justify-items: center;
+}
+footer{
+    background-color: #f3d2c1;
+}
+.footer-right{
+    display: flex;
+    justify-content: space-around;
 }
 
 @media screen and (min-width: 650px) and (max-width: 1650px){

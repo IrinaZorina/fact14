@@ -1,3 +1,4 @@
+<?php include 'inc/globalFunc.php'; ?>
 <!doctype html>
 <html lang="en">
 
@@ -10,15 +11,6 @@
 
     <?php
 
-    function theme($time)
-    {
-        if ($time > 7 and $time <= 19) {
-            echo "<link rel='stylesheet' href='styles/styles_day.css'>";
-        } else {
-            echo '<link rel="stylesheet" href="styles/styles_night.css">';
-        }
-    }
-
     $date = date("H");
     theme($date);
 
@@ -30,10 +22,12 @@
 <body>
     <header>
         <div class="navigation">
-            <a href="index.php">
-                <div class="wow logo"></div>
-            </a>
-            <nav class="wow nav">
+            <div>
+                <a href="index.php">
+                    <div class="wow logo"></div>
+                </a>
+            </div>
+            <nav class="wow nav flex-2">
                 <a href="tables.php" class="item">Таблица</a>
                 <a href="forms.php" class="item">HTML-формы</a>
                 <a href="loops.php" class="item">Циклы</a>

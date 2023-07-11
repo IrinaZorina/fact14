@@ -1,4 +1,3 @@
-<?php include 'inc/globalFunc.php'; ?>
 <?php require_once 'inc/header.php'; ?>
 <main>
     <section class="personal">
