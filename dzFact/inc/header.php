@@ -33,6 +33,8 @@ theme();
 					<li class="menu"><a class="menu_text" href="http://dzfact/dzFact/array.php">Массивы</a></li>
 					<li class="menu"><a class="menu_text" href="http://dzfact/dzFact/string.php">Строки</a></li>
                     <li class="menu"><a class="menu_text" href="http://dzfact/dzFact/function.php">Функции</a></li>
+					<li class="menu"><a class="menu_text" href="http://dzfact/dzFact/method.php">Get-Post</a></li>
+                    <li class="menu"><a class="menu_text" href="http://dzfact/dzFact/authorization.php">Авторизация</a></li>
 				</ul>
 
 			</div>
