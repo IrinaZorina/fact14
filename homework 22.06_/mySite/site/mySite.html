@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <?php
+            $date = new DateTime('NOW');
+            $hour = $date->format('G');
+            if ( ($hour > 8) && ($hour < 20) ) {
+                echo '<link rel="stylesheet" href="../styles/stylesDay.css">';
+            } 
+            else {
+                echo '<link rel="stylesheet" href="../styles/stylesNight.css">';
+            }
+        ?>
+        <title>Профиль</title>
+        <link rel="stylesheet" href="../styles/Styles.css">
+    </head>
+    <body>
+    <header class="head-line">
+        <img class="image_logo" src="../images/icons8.png" align="right">
+    </header>
+    <main>
+        <section class="section_one">
+            <div class="block1">
+                <h1 class="name">Алия Мукаева</p>
+                    <img class="img" src="../images/IMG_5987.jpg">
+                </h1>
+            </div>
+            <div class="block2">
+                <h1 class="name">Обо мне</h1>
+                    <h2 class="list">
+                        <ul>
+                            <li>опытный руководитель в сфере общепита</li>
+                            <li>счастливая мама и жена</li>
+                            <li>вечный студент</li>
+                            <li><a href="https://vk.com/id2813063" class="item">Страничка vk</a></li>
+                        </ul>
+                    </h2>
+                </h1>
+            </div>   
+            <div class="block3">
+                <h1 class="name">Обратная связь
+                    <img class="img2" src="../images/base_da7cf941e8.gif">
+                </h1>
+                    <h2 class="list">Тяжело в учении - легко в бою!
+                    </h2>
+            </div>   
+        </section>
+        <section class="education">
+            <div class="block-name">Профильное обучение</div>
+            <div class="gallery-horizontal-block">
+                <div class="horizontal-block1">
+                    <figure class="sign">
+                        <p><img class="image-education" src="../images/Sertif_Power BI .JPG"></p>
+                        <figcaption> Курс "Основы Power BI"</figcaption>
+                    </figure>
+                </div>
+                <div class="horizontal-block2">
+                    <figure class="sign">
+                        <p><img class="image-education" src="../images/Sertif_Business Analyst_Power BI .JPG"></p>
+                        <figcaption>Курс "Бизнес-аналитика (BI)"</figcaption>
+                    </figure>
+                </div>
+                <div class="horizontal-block3">
+                    <figure class="sign">
+                        <p><img class="image-education" src="../images/Sertif_Project Management.JPG"></p>
+                        <figcaption>Курс "Проектная деят-ть"</figcaption>
+                    </figure>
+                </div>
+                <div class="horizontal-block4">
+                    <figure class="sign">
+                        <p><img class="image-education" src="../images/In process_Bitrix.png"></p>
+                        <figcaption>_Веб-разработка"1С-Битрикс"</figcaption>
+                    </figure>
+                </div>
+            </div>
+        </section>
+        <div class="block-name2">Приобретенные навыки</div>
+        <section class="hard-skills">
+            <div class="vertical-block1">
+                <figure class="sign">
+                    <picture>
+                        <source class="image-skills" srcset="../images/HTML_2.jpg" media="(min-width: 400px)">
+                        <img src="../images/HTML_2_200px.jpg">
+                    </picture>
+                    <figcaption>HTML</figcaption>
+                </figure>
+            </div>
+            <div class="vertical-block2">
+                <figure class="sign">
+                    <picture>
+                        <source class="image-skills" srcset="../images/PHP_2.jpg" media="(min-width: 400px)">
+                        <img src="../images/PHP_2_200px.jpg">
+                    </picture>
+                    <figcaption>PHP</figcaption>
+                </figure>
+            </div>
+            <div class="vertical-block3">
+                <figure class="sign">
+                    <picture>
+                        <source class="image-skills" srcset="../images/SQL_2.jpg" media="(min-width: 400px)">
+                        <img  src="../images/SQL_2_200px.jpg">
+                    </picture>
+                    <figcaption>SQL</figcaption>
+                </figure>
+            </div>
+            <div class="vertical-block4">
+                <figure class="sign">
+                    <picture>
+                        <source class="image-skills" srcset="../images/GIT_3.jpg" media="(min-width: 400px)">
+                        <img src="../images/GIT_3_200px.jpg">
+                    </picture>
+                    <figcaption>GIT</figcaption>
+                </figure>
+            </div>
+        </section>
+    </main> 
+    <footer class="foot">2023-Алия Мукаева, по всем вопросам обращайтесь tvoyaeda.m@gmail.com
+    </footer>
+    </body>
+</html>
