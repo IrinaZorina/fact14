@@ -1,4 +1,21 @@
-<?php include 'inc/globalFunc.php'; ?>
+<?php include 'globalFunc.php'; ?>
+<?php
+if (isset($_GET['color'])) {
+    setcookie('color', $_GET['color'], time() + 3600 * 24 * 7);
+}
+
+if (isset($_COOKIE)) { // куки проставляется по гет-параметрам (грин, йеллоу, блу). если проверить эко через другие выражения - все работает. но таблицы стилей подключать не хочет, как следствие цвет футера не меняется.
+    foreach ($_COOKIE as $value) {
+        if ($value == 'green') {
+            echo "<link rel='stylesheet' href='styles/footerGreen.css'>";
+        } elseif ($value == 'yellow') {
+            echo "<link rel='stylesheet' href='styles/footerYellow.css'>";
+        } elseif ($value == 'blue') {
+            echo "<link rel='stylesheet' href='styles/footerBlue.css'>";
+        }
+    }
+}
+?>
 <!doctype html>
 <html lang="en">
 
@@ -34,7 +51,6 @@
                 <a href="arrays.php" class="item">Массивы</a>
                 <a href="strings.php" class="item">Строки</a>
                 <a href="function.php" class="item">Функции</a>
-                <a href="getpost.php" class="item">GET/POST</a>
             </nav>
             <div class="wow nav">
                 <a href="login.php" class="item">Авторизация</a>

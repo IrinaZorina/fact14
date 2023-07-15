@@ -1,3 +1,6 @@
+<?php
+session_start();
+?>
 <?php require_once 'inc/header.php'; ?>
 <main class="some-text">
     <div class="login-form">
@@ -20,3 +23,8 @@
     </div>
 </main>
 <?php require_once 'inc/footer.php'; ?>
+<?php
+
+session_destroy();
+
+?>

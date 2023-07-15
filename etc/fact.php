@@ -1,6 +1,6 @@
 <?php
 session_start();
-$_SESSION['login'] = $_POST['login'];
+$_SESSION['site'] = 'fact.php';
 ?>
 <!doctype html>
 <html lang="en">
@@ -53,42 +53,7 @@ $_SESSION['login'] = $_POST['login'];
         </div>
     </header>
     <main class="some-text">
-
-        <?php
-
-        if (isset($_POST['submit'])) {
-            $login = trim($_POST['login']);
-            if (!preg_match('&^[a-zA-Zа-яА-ЯёЁ]+$&u', $login)) {
-                exit('Имя некорректно!');
-            }
-            $_POST['password'] = md5($_POST['password']);
-            $password = $_POST['password'];
-            echo 'Приветствуем Вас, ' . $login . '.<br><br>';
-        }
-
-        // echo '<pre>';
-        // print_r($_POST);
-        // echo '</pre>';
-
-        // echo '<pre>';
-        // print_r($_SESSION);
-        // echo '</pre>';
-
-        ?>
-
-        <div>
-            Для Вас открылись страницы <a href="fact.php" class="item">Fact</a> и <a href="bitrix.php" class="item">Bitrix</a>.<br><br>
-        </div>
-
-        <?php
-
-        if (isset($_SESSION['site'])) {
-            echo $_SESSION['login'] . ', в последний раз Вы находились на странице: ' . $_SESSION['site'];
-        } else {
-            echo $_SESSION['login'] . ', зайдите на какую-нибудь страницу выше!';
-        }
-
-        ?>
+        <h1>Добро пожаловать на сайт Fact.</h1>
     </main>
     <br><br><br>
     <footer>
