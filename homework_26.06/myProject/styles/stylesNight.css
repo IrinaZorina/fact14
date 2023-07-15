@@ -1,0 +1,18 @@
+body {
+    background-color: rgb(31, 14, 2);
+    color: blanchedalmond;
+}
+.head-line{
+    background-color: cornsilk;
+    color: rgb(68, 30, 3);
+}
+.name, .block-name{
+    color: blanchedalmond;
+}
+.sign{
+    background: #f0f0f0; 
+    color: rgb(31, 14, 2);
+}
+.block-name2{
+    color: blanchedalmond;
+}

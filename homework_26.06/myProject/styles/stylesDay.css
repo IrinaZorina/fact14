@@ -1,0 +1,18 @@
+body {
+    background-color: rgb(248, 233, 175);
+    color: rgb(56, 34, 1);
+}
+.head-line{
+    background-color: rgb(177, 97, 6);
+    color: rgb(56, 34, 1);
+}
+.name, .block-name{
+    color: rgb(56, 34, 1);
+}
+.sign{
+    background: #f0f0f0; 
+    color: rgb(56, 34, 1);
+}
+.block-name2{
+    color: rgb(56, 34, 1);
+}

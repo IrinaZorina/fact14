@@ -1,0 +1,471 @@
+.backgroundDay{
+    background-color: rgba(225, 228, 185, 0.932);
+}
+.backgroungNight{
+    background-color: rgb(22, 23, 23);
+}
+.conteaner {
+    grid-gap: 30px;
+    display: grid;
+    grid-template-columns: 1fr 2fr 2fr;
+    grid-template-rows: 100px 400px;
+}
+
+.images {
+    align-self: start;
+    grid-row: 2;
+    background-image: url("../images/msg2.jpg");
+    width: 400px;
+    height: 400px;
+}
+
+.aboutMe {
+    grid-row: 2;
+}
+
+.myOpinion {
+    grid-row: 2;
+}
+
+.name {
+    align-self: end;
+    justify-self: end;
+    grid-column-start: 2;
+    grid-column-end: 3;
+    grid-row: 1;
+}
+
+.logo {
+    width: 5px;
+}
+
+
+.headerlogo {
+    display: flex;
+    justify-content: flex-start;
+    border-bottom: 1px solid black;
+
+}
+
+.conteanerTemple {
+    gap: 30px;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    justify-items: center;
+    padding: 20px;
+}
+
+.Angkor {
+    width: 250px;
+    height: 250px;
+    background-image: url(../images/AngkorWat.jpg);
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    z-index: 1;
+}
+
+.Kailash {
+    width: 250px;
+    height: 250px;
+    background-image: url(../images/KailashTemple.jpg);
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    z-index: 1;
+}
+
+
+.Karli {
+    width: 250px;
+    height: 250px;
+    background-image: url(../images/KarliTemple.jpg);
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    z-index: 1;
+}
+
+.PhrayaNakhon {
+    width: 250px;
+    height: 250px;
+    background-image: url(../images/PhrayaNakhon.jpg);
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    z-index: 1;
+}
+
+.conteanerStatues {
+    gap: 30px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    justify-items: center;
+    padding: 40px;
+}
+
+.bigBuddha {
+    width: 500px;
+    height: 400px;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    z-index: 1;
+    background-image: url(../images/TheBigBuddhaOfLeshan.jpg)
+}
+
+.guanYu {
+    width: 500px;
+    height: 400px;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    z-index: 1;
+    background-image: url(../images/GuanYu.jpg)
+}
+
+.garudaWisnuKencana {
+    width: 500px;
+    height: 400px;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    z-index: 1;
+    background-image: url(../images/GarudaWisnuKencana.jpg)
+}
+
+.vallabhbhaiPatel {
+    width: 500px;
+    height: 400px;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    z-index: 1;
+    background-image: url(../images/vallabhbhaiPatel.jpg)
+}
+
+.griditem {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    position: relative;
+
+}
+
+.griditem::before {
+    content: "";
+    position: absolute;
+    top: -35px;
+    left: -35px;
+    right: -35px;
+    bottom: -35px;
+    background-color: white;
+    z-index: -1;
+}
+
+.statue {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    position: relative;
+    margin-bottom: 90px;
+}
+
+
+.statue::before {
+    content: "";
+    position: absolute;
+    top: -35px;
+    left: -35px;
+    right: -35px;
+    bottom: -35px;
+    background-color: white;
+    z-index: -1;
+}
+
+.paragraph1 {
+    display: grid;
+    grid-column: 1 / -1;
+    grid-row: 1;
+    justify-content: center;
+    padding: 20px;
+}
+
+.paragraph2 {
+    display: grid;
+    grid-column: 1 / -1;
+    grid-row: 1;
+    justify-content: center;
+    padding: 20px;
+    z-index: 2;
+}
+
+@media screen and (min-width: 200px) and (max-width: 350px) {
+    .conteanerTemple {
+        grid-template-columns: 1fr;
+    }
+
+    .griditem {
+        margin-bottom: 40px;
+    }
+
+    .statue {
+        margin-bottom: 40px;
+    }
+
+    .Angkor,
+    .Kailash {
+        grid-row: 1;
+    }
+
+    .Karli,
+    .PhrayaNakhon {
+        grid-row: 2;
+    }
+
+    .conteaner {
+        grid-template-columns: 1fr;
+        grid-template-rows: 100px 200px;
+    }
+
+    .images {
+        grid-row: 2;
+        background-image: url("../images/msg2.jpg");
+        width: 280px;
+    }
+
+    .aboutMe {
+        grid-row: 3;
+    }
+
+    .myOpinion {
+        grid-row: 4;
+    }
+
+    .name {
+        justify-self: start;
+        grid-column-start: 1;
+        grid-column-end: 2;
+    }
+
+    .conteanerStatues {
+        grid-template-columns: 1fr;
+        gap: 30px;
+        display: grid;
+        justify-items: center;
+        align-items: center;
+        padding: 40px;
+    }
+
+    .vallabhbhaiPatel,
+    .garudaWisnuKencana,
+    .guanYu,
+    .bigBuddha {
+        background-size: contain;
+        background-repeat: no-repeat;
+        width: 200px;
+        height: 200px;
+    }
+
+    .Angkor,
+    .Kailash {
+        width: 200px;
+        height: 200px;
+    }
+
+    .Karli,
+    .PhrayaNakhon {
+        width: 200px;
+        height: 200px;
+    }
+
+    .images {
+        background-size: contain;
+        background-repeat: no-repeat;
+        width: 200px;
+        height: 200px;
+    }
+
+    .griditem::before {
+        top: -20px;
+        left: -20px;
+        right: -20px;
+        bottom: -20px;
+
+    }
+
+    .statue::before {
+        top: -20px;
+        left: -20px;
+        right: -20px;
+        bottom: -20px;
+    }
+}
+
+@media screen and (min-width: 350px) and (max-width: 500px) {
+
+    .conteanerTemple {
+        grid-template-columns: 1fr;
+    }
+
+    .griditem {
+        margin-bottom: 90px;
+    }
+
+    .Angkor,
+    .Kailash {
+        grid-row: 1;
+    }
+
+    .Karli,
+    .PhrayaNakhon {
+        grid-row: 2;
+    }
+
+    .conteaner {
+        grid-template-columns: 1fr;
+    }
+
+    .images {
+        grid-row: 2;
+        background-image: url("../images/msg2.jpg");
+        width: 280px;
+    }
+
+    .aboutMe {
+        grid-row: 3;
+    }
+
+    .myOpinion {
+        grid-row: 4;
+    }
+
+    .name {
+        justify-self: start;
+        grid-column-start: 1;
+        grid-column-end: 2;
+    }
+
+    .conteanerStatues {
+        grid-template-columns: 1fr;
+        gap: 30px;
+        display: grid;
+        justify-items: center;
+        align-items: center;
+        padding: 40px;
+    }
+
+    .vallabhbhaiPatel,
+    .garudaWisnuKencana,
+    .guanYu,
+    .bigBuddha {
+        background-size: contain;
+        background-repeat: no-repeat;
+        width: 250px;
+        height: 250px;
+    }
+
+}
+
+@media screen and (min-width: 500px) and (max-width: 800px) {
+    .conteanerTemple {
+        gap: 30px;
+        display: grid;
+        grid-template-columns: 1fr;
+    }
+
+    .griditem {
+        margin-bottom: 90px;
+    }
+
+    .conteaner {
+        grid-template-columns: 1fr;
+    }
+
+    .images {
+        justify-self: center;
+        grid-row: 2;
+        background-image: url("../images/msg2.jpg");
+    }
+
+    .aboutMe {
+        grid-row: 3;
+    }
+
+    .myOpinion {
+        grid-row: 4;
+    }
+
+    .name {
+        align-self: end;
+        justify-self: center;
+        grid-column-start: 1;
+        grid-column-end: 2;
+    }
+
+    .conteanerStatues {
+        grid-template-columns: 1fr;
+        gap: 30px;
+        display: grid;
+        justify-items: center;
+        align-items: center;
+        padding: 40px;
+    }
+
+    .vallabhbhaiPatel,
+    .garudaWisnuKencana,
+    .guanYu,
+    .bigBuddha {
+        background-size: contain;
+        background-repeat: no-repeat;
+        width: 250px;
+        height: 250px;
+    }
+}
+
+@media screen and (min-width: 800px) and (max-width: 1200px) {
+    .conteanerTemple {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .griditem {
+        margin-bottom: 90px;
+    }
+
+    .conteaner {
+        grid-template-columns: 3fr;
+
+    }
+
+    .conteanerStatues {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .vallabhbhaiPatel,
+    .garudaWisnuKencana,
+    .guanYu,
+    .bigBuddha {
+        background-size: contain;
+        background-repeat: no-repeat;
+        width: 300px;
+        height: 300px;
+    }
+}
+
+@media screen and (min-width: 1200px) and (max-width: 1500px) {
+    .conteanerTemple {
+        grid-template-columns: repeat(4, 1fr);
+    }
+
+    .Angkor,
+    .Kailash,
+    .Karli,
+    .PhrayaNakhon {
+        width: 200px;
+        height: 200px;
+    }
+}
