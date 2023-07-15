@@ -16,7 +16,7 @@ session_start();
 <?php
 $_SESSION=$_POST;
 if(!empty($_POST)){
-    header('location: fon.php');
+    header('location: index.php');
 }
 ?>
 <?php require_once "inc/footer.php"; ?>
