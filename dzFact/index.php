@@ -51,4 +51,7 @@
     </section>
 </main>
 
-<?php require_once "inc/footer.php"; ?>
+<?php
+print_r($_SESSION);
+
+require_once "inc/footer.php"; ?>
