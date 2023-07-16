@@ -3,6 +3,17 @@
   padding: 0;
   box-sizing: border-box;
 }
+html,
+body {
+  height: 100%;
+}
+body {
+  display: flex;
+  flex-direction: column;
+}
+.main {
+  flex-grow: 1;
+}
 /* ================================================================================================== */
 /*                                ДНЕВНОЙ СТИЛЬ АБЗАЦЕВ                                               */
 /* ================================================================================================== */
@@ -15,12 +26,61 @@ p {
   color: black;
   margin: 50px 0 20px 0;
 }
+/* ================================================================================= */
+/*                         ФОРМЫ РЕГИСТРАЦИИ АВТОРИЗАЦИИ                              */
+/* ================================================================================== */
+
+.form {
+  font-family: "Roboto" sans-serif;
+  display: flex;
+  flex-direction: column;
+  width: 400px;
+  /* text-indent: 15px; */
+  /* text-align: justify; */
+  /* padding: 5px 5px 5px 5px; */
+  font-size: 20px;
+  font-family: "Roboto", sans-serif;
+  /* color: black; */
+  /* margin: 5px 0 5px 0; */
+}
+.form p{
+  font-size: 16px;
+  margin: 10px;
+  text-indent: 0;
+}
+.form a{
+  font-size: 16px;
+  margin: 0;
+  text-decoration: none;
+  font-weight: bold;
+}
+input,
+button {
+  margin: 10px 0;
+  padding: 10px;
+  border: unset;
+  border-bottom: 4px solid darkgrey;
+}
+button {
+  cursor: pointer;
+}
+
+/* .form{
+  text-indent: 15px;
+  text-align: justify;
+  padding: 5px 5px 5px 5px;
+  font-size: 20px;
+  font-family: "Roboto", sans-serif;
+  color: black;
+  margin: 5px 0 5px 0;
+} */
 /* Зададим рамки и отступы */
 .header,
 .photo,
 .name,
 .info,
-.comment,.footer_contatiner {
+.comment,
+.footer_contatiner {
   border: 5px solid white;
   margin-bottom: 5px;
 }
@@ -30,10 +90,13 @@ p {
   margin-left: 5px;
 }
 /* Зададим цвета и рамки блока нашей карточки */
-body{
-  background-color:lightgrey;
+body {
+  background-color: lightgrey;
 }
-.header,.info,.comment,.footer_contatiner {
+.header,
+.info,
+.comment,
+.footer_contatiner {
   background-color: teal;
 }
 .name {
@@ -48,29 +111,61 @@ body{
   max-width: 1500px;
   margin: 0 auto;
 }
+
+/*-------------------------HEADER---------------------------------*/
 .header {
   display: flex;
   justify-content: space-between;
   align-items: center;
   width: 100%;
-  height: 150px;
+  /* height: 150px; */
 }
+/* ----------------------Класс разделения навигации и авторизации---------------------- */
+.nav_auth {
+  display: flex;
+  justify-content: flex-end;
+  /* align-items: center; */
+}
+/* --------------------Логотип----------------------------- */
 .logo {
   margin-left: 30px;
   font-size: 26px;
   font-family: "Roboto", sans-serif;
   color: aliceblue;
 }
-.nav_bar a{
+/* ---------------------Навигация сайта--------------------- */
+.nav_bar a {
   font-family: "Roboto", sans-serif;
   color: aliceblue;
   margin-left: 10px;
   margin-right: 30px;
   text-decoration: none;
 }
-a:hover,.list_item a:hover{
+/* ------------Блок регистрации и Авторизации---------------- */
+.auth_registr{
+  display: flex;
+  flex-direction: column;
+justify-content: center;
+}
+.auth a,.registr a {
+  margin-left: 10px;
+  margin-right: 30px;
+  font-size: 26px;
+  font-family: "Roboto", sans-serif;
+  color: aliceblue;
+  text-decoration: none;
+}
+a:hover,
+.list_item a:hover {
   color: silver;
 }
+.message {
+  border: 2px solid orange;
+  padding:5px;
+  text-align: center;
+  font-weight: bold;
+}
+/*--------------------------ФОТО ИНФО ОТЗЫВ-----------------------------------------*/
 .photo {
   width: 260px;
   height: 360px;
@@ -107,6 +202,7 @@ a:hover,.list_item a:hover{
   font-size: 20px;
   font-family: "Roboto", sans-serif;
 }
+
 /* ===================================================================================== */
 /*                                       КАРТИНКИ INDEX FLEX */
 /* ===================================================================================== */
@@ -134,6 +230,7 @@ a:hover,.list_item a:hover{
   font-size: 14px;
   margin-top: 2px;
 }
+
 /* ====================================================================================== */
 /*                                 КАРТИНКИ INDEX GRID                                    */
 /* ====================================================================================== */
@@ -155,167 +252,169 @@ a:hover,.list_item a:hover{
 .index_grid_container .image_text {
   margin-top: 2px;
 }
+
 /* =================================================================================== */
 /*                              ТАБЛИЦА МЕНДЕЛЕЕВА                                     */
 /* =================================================================================== */
- /* ========Общие свойства элементов ВОДОРОД УГЛЕРОД ЖЕЛЕЗО ЛАНТАН ========================== */
- .Hydrogen,
- .Carboneum,
- .Ferrum,
- .Lantan,
- .Oxigen,
- .Sodium,
- .Tungsten,
- .Thorium {
-   width: 150px;
-   height: 105px;
-   display: flex;
-   margin-bottom: 30px;
- }
- /* В ТАБЛИЦЕ ВСЕГО 4 ЦВЕТА ЯЧЕЕК. МОЖНО ПРИМЕНИТЬ НАСЛЕДОВАНИЕ, ДОБАВЛЯЯ НОВЫЕ ЭЛЕМЕНТЫ СЮДА*/
- .Hydrogen,
- .Sodium {
-   background-color: rgb(255 51 153);
- }
- 
- .Carboneum,
- .Oxigen {
-   background-color: yellow;
- }
- .Ferrum,
- .Tungsten {
-   background-color: rgba(0, 132, 255, 0.966);
- }
- .Lantan,
- .Thorium {
-   background-color: #15ff00f6;
- }
- /*В ТАБЛИЦЕ ВСЕГО 2 ВИДА РАСПОЛОЖЕНИЯ КОНТЕЙНЕРОВ ВНУТРИ ЯЧЕЕК ТАБЛИЦЫ. ЭТО ВОДОРОД И ЖЕЛЕЗО
+/* ========Общие свойства элементов ВОДОРОД УГЛЕРОД ЖЕЛЕЗО ЛАНТАН ========================== */
+.Hydrogen,
+.Carboneum,
+.Ferrum,
+.Lantan,
+.Oxigen,
+.Sodium,
+.Tungsten,
+.Thorium {
+  width: 150px;
+  height: 105px;
+  display: flex;
+  margin-bottom: 30px;
+}
+/* В ТАБЛИЦЕ ВСЕГО 4 ЦВЕТА ЯЧЕЕК. МОЖНО ПРИМЕНИТЬ НАСЛЕДОВАНИЕ, ДОБАВЛЯЯ НОВЫЕ ЭЛЕМЕНТЫ СЮДА*/
+.Hydrogen,
+.Sodium {
+  background-color: rgb(255 51 153);
+}
+
+.Carboneum,
+.Oxigen {
+  background-color: yellow;
+}
+.Ferrum,
+.Tungsten {
+  background-color: rgba(0, 132, 255, 0.966);
+}
+.Lantan,
+.Thorium {
+  background-color: #15ff00f6;
+}
+/*В ТАБЛИЦЕ ВСЕГО 2 ВИДА РАСПОЛОЖЕНИЯ КОНТЕЙНЕРОВ ВНУТРИ ЯЧЕЕК ТАБЛИЦЫ. ЭТО ВОДОРОД И ЖЕЛЕЗО
  УСЛОВНО КЛАССЫ ВОДОРОДА name, atom_num, ru_name, mass БУДУТ С ЦИФРОЙ 1, А ЖЕЛЕЗА С ЦИФРОЙ 2
  ТАКИМ ОБРАЗОМ МОЖНО ГРУППИРОВАТЬ КОНТЕЙНЕРЫ СРАЗУ В HTML КОДЕ. */
- 
- /* ===========ШАБЛОН ВОДОРОД====================== */
- .name1 {
-   /* назначим приоритет заполнения по ширине(половина)  */
-   flex: 1;
-   height: 70px;
-   font-size: 70px;
-   font-weight: bolder;
-   margin-top: -5px;
-   margin-left: 5px;
- }
- .atom_num1 {
-   /* назначим приоритет заполнения по ширине(половина)*/
-   flex: 1;
-   font-size: 26px;
-   display: flex;
-   justify-content: flex-end;
-   margin-right: 10px;
-   margin-top: 5px;
-   font-weight: bolder;
-   font-family: sans-serif;
- }
- .ru_name1,
- .mass1 {
-   /* назначим приоритет заполнения по ширине(весь)*/
-   flex: 2 2 100px;
-   height: 15px;
-   font-weight: bolder;
-   font-family: sans-serif;
-   margin-left: 5px;
- }
- 
- /* ========ШАБЛОН ВЕРТИКАЛЬНОГО КОНТЕЙНЕРА СТЕПЕНИ ОКИСЛЕНИЯ========== */
- .container2 {
-   width: 10px;
-   height: 105px;
-   display: flex;
-   flex-flow: row wrap;
-   align-items: flex-end;
- }
- /* Список значений степени окисления */
- .oxid_state {
-   display: flex;
-   flex-flow: column wrap;
-   list-style-type: none;
-   padding-left: 2px;
-   display: flex;
-   font-family: sans-serif;
-   font-size: 10px;
-   font-weight: bolder;
- }
- /* ===========ШАБЛОН КОНТЕЙНЕРА для name, atom_num, ru_name, mass ===========*/
- .container {
-   display: flex;
-   flex-flow: row wrap;
-   width: 150px;
-   height: 105px;
- }
- /* ====================================================================== */
- /* ============ШАБЛОН ЖЕЛЕЗО================== */
- .atom_num2 {
-   flex: 1;
-   width: 20px;
-   margin-left: 10px;
-   margin-top: 5px;
-   font-size: 26px;
-   font-weight: bolder;
-   font-family: sans-serif;
- }
- .name2 {
-   flex: 1;
-   height: 70px;
-   font-size: 70px;
-   font-weight: bolder;
-   margin-top: -5px;
- }
- .ru_name2,
- .mass2 {
-   flex: 2 2 100px;
-   height: 15px;
-   margin-left: 65px;
-   font-weight: bolder;
-   font-family: sans-serif;
- }
- /* Вольфрам */
- .Tungsten .ru_name2 {
-   margin-left: 40px;
- }
- .Tungsten .mass2 {
-   margin-left: 40px;
- }
- /* =============FLEX=============== */
- .mendeleev_flex_container {
-   display: flex;
-   justify-content: space-around;
-   flex-wrap: wrap;
-   margin-left: 20px;
- }
- .mendeleev_grid_container {
-   display: grid;
-   grid-template-columns: repeat(2, 1fr);
-   justify-items: center;
-   margin-left: 20px;
- }
+
+/* ===========ШАБЛОН ВОДОРОД====================== */
+.name1 {
+  /* назначим приоритет заполнения по ширине(половина)  */
+  flex: 1;
+  height: 70px;
+  font-size: 70px;
+  font-weight: bolder;
+  margin-top: -5px;
+  margin-left: 5px;
+}
+.atom_num1 {
+  /* назначим приоритет заполнения по ширине(половина)*/
+  flex: 1;
+  font-size: 26px;
+  display: flex;
+  justify-content: flex-end;
+  margin-right: 10px;
+  margin-top: 5px;
+  font-weight: bolder;
+  font-family: sans-serif;
+}
+.ru_name1,
+.mass1 {
+  /* назначим приоритет заполнения по ширине(весь)*/
+  flex: 2 2 100px;
+  height: 15px;
+  font-weight: bolder;
+  font-family: sans-serif;
+  margin-left: 5px;
+}
+
+/* ========ШАБЛОН ВЕРТИКАЛЬНОГО КОНТЕЙНЕРА СТЕПЕНИ ОКИСЛЕНИЯ========== */
+.container2 {
+  width: 10px;
+  height: 105px;
+  display: flex;
+  flex-flow: row wrap;
+  align-items: flex-end;
+}
+/* Список значений степени окисления */
+.oxid_state {
+  display: flex;
+  flex-flow: column wrap;
+  list-style-type: none;
+  padding-left: 2px;
+  display: flex;
+  font-family: sans-serif;
+  font-size: 10px;
+  font-weight: bolder;
+}
+/* ===========ШАБЛОН КОНТЕЙНЕРА для name, atom_num, ru_name, mass ===========*/
+.container {
+  display: flex;
+  flex-flow: row wrap;
+  width: 150px;
+  height: 105px;
+}
+/* ====================================================================== */
+/* ============ШАБЛОН ЖЕЛЕЗО================== */
+.atom_num2 {
+  flex: 1;
+  width: 20px;
+  margin-left: 10px;
+  margin-top: 5px;
+  font-size: 26px;
+  font-weight: bolder;
+  font-family: sans-serif;
+}
+.name2 {
+  flex: 1;
+  height: 70px;
+  font-size: 70px;
+  font-weight: bolder;
+  margin-top: -5px;
+}
+.ru_name2,
+.mass2 {
+  flex: 2 2 100px;
+  height: 15px;
+  margin-left: 65px;
+  font-weight: bolder;
+  font-family: sans-serif;
+}
+/* Вольфрам */
+.Tungsten .ru_name2 {
+  margin-left: 40px;
+}
+.Tungsten .mass2 {
+  margin-left: 40px;
+}
+/* =============FLEX=============== */
+.mendeleev_flex_container {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  margin-left: 20px;
+}
+.mendeleev_grid_container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  justify-items: center;
+  margin-left: 20px;
+}
+
 /* ==================================================================================  */
 /*                                     FOOTER                                          */
 /* =================================================================================== */
-.footer_contatiner{
+.footer_contatiner {
   display: flex;
   width: 100%;
   margin-top: 100px;
 }
-.footer-list{
+.footer-list {
   display: flex;
   justify-content: space-between;
 }
-.list_item{
+.list_item {
   font-size: 20px;
   font-family: "Roboto", sans-serif;
   color: aliceblue;
   margin: 10px 10px 10px 5px;
 }
-.list_item a{
+.list_item a {
   text-decoration: none;
   font-family: "Roboto", sans-serif;
   color: aliceblue;
@@ -384,27 +483,27 @@ a:hover,.list_item a:hover{
 /* ================================================================================================== */
 /*                             МЕДИА ЗАПРОС ДЛЯ ТАБЛИЦЫ МЕНДЕЛЕЕВА GRID                               */
 /* ================================================================================================== */
-  /* Смартфон */
-  @media screen and (min-width: 320px){
-    .mendeleev_grid_container {
-      grid-template-columns: 1fr;
-    }
+/* Смартфон */
+@media screen and (min-width: 320px) {
+  .mendeleev_grid_container {
+    grid-template-columns: 1fr;
   }
-  /* Планшет */
-  @media (min-width: 768px) {
-    .mendeleev_grid_container {
-      grid-template-columns: repeat(2, 1fr);
-    }
+}
+/* Планшет */
+@media (min-width: 768px) {
+  .mendeleev_grid_container {
+    grid-template-columns: repeat(2, 1fr);
   }
-  /* Нетбук */
-  @media (min-width: 1024px) {
-    .mendeleev_grid_container {
-      grid-template-columns: repeat(3, 1fr);
-    }
+}
+/* Нетбук */
+@media (min-width: 1024px) {
+  .mendeleev_grid_container {
+    grid-template-columns: repeat(3, 1fr);
   }
-  /* Монитор */
-  @media (min-width: 1280px) {
-    .mendeleev_grid_container {
-      grid-template-columns: repeat(4, 1fr);
-    }
+}
+/* Монитор */
+@media (min-width: 1280px) {
+  .mendeleev_grid_container {
+    grid-template-columns: repeat(4, 1fr);
   }
+}
