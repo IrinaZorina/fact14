@@ -1,5 +1,5 @@
 <?php
-session_start();
+
 //функция смены темы дня и ночи
 
 function theme(){

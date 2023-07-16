@@ -1,7 +1,3 @@
-<?php
-session_start();
-?>
-
 <?php require_once "inc/header.php"; ?>
 
 <p class="zad">Выберете тему</p><br>
@@ -14,8 +10,9 @@ session_start();
         <input type="submit" value="выбрать">
     </form>
 <?php
-$_SESSION=$_POST;
+
 if(!empty($_POST)){
+    $_SESSION=$_POST;
     header('location: index.php');
 }
 ?>

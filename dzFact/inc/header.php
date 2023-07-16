@@ -1,5 +1,5 @@
 <?php
-
+session_start();
 //тема!!!
 require_once "inc/GlobalFunctions.php";
 theme();
@@ -39,6 +39,7 @@ theme();
                     <li class="menu"><a class="menu_text" href="fact.php">Fact</a></li>
                     <li class="menu"><a class="menu_text" href="bitrix.php">Bitrix</a></li>
                     <li class="menu"><a class="menu_text" href="fon.php">Фон</a></li>
+                    <li class="menu"><a class="menu_text" href="viktorina.php">Викторина</a></li>
 				</ul>
 
 			</div>
