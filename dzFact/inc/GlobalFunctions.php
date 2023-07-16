@@ -3,24 +3,67 @@
 //функция смены темы дня и ночи
 
 function theme(){
+    if(!empty($_SESSION) && array_key_exists('theme', $_SESSION)){
+        if ($_SESSION['theme']=='day'){
+            echo <<<html
 
-    if ($_SESSION['theme']=='day'){
-        echo <<<html
-
-            <link rel="stylesheet" href="styles/style_index_day.css">
-
-html;
-    }
-
-    elseif ($_SESSION['theme']=='night'){
-        echo <<<html
-
-            <link rel="stylesheet" href="styles/style_index_night.css">
+                <link rel="stylesheet" href="styles/style_index_day.css">
 
 html;
-    }
+        }
 
-    elseif ($_SESSION['theme']=='time' || $_SESSION['theme']!='day' || $_SESSION['theme']!='night' || empty($_SESSION)){
+        elseif ($_SESSION['theme']=='night'){
+            echo <<<html
+
+                <link rel="stylesheet" href="styles/style_index_night.css">
+
+html;
+        }
+
+        elseif ($_SESSION['theme']=='time'){
+            $dateNum=date('G');
+
+            $Num=(int)$dateNum;
+
+
+            if(8<=$Num && $Num<20){
+                echo <<<html
+
+                    <link rel="stylesheet" href="styles/style_index_day.css">
+
+html;
+            }
+            else{
+                echo <<<html
+
+                    <link rel="stylesheet" href="styles/style_index_night.css">
+
+html;
+            }
+        }
+    }
+    elseif (!array_key_exists('theme', $_SESSION)){
+        $dateNum=date('G');
+
+            $Num=(int)$dateNum;
+
+
+            if(8<=$Num && $Num<20){
+                echo <<<html
+
+                    <link rel="stylesheet" href="styles/style_index_day.css">
+
+html;
+            }
+            else{
+                echo <<<html
+
+                    <link rel="stylesheet" href="styles/style_index_night.css">
+
+html;
+            }
+    }
+    elseif(empty($_SESSION)){
         $dateNum=date('G');
 
         $Num=(int)$dateNum;
@@ -43,7 +86,6 @@ html;
 
         }
     }
-
 
 }
 

@@ -15,10 +15,10 @@
 
 <?php
 if(!empty($_POST)){
-    $_SESSION=$_POST;
+    $a=$_POST;
+    $_SESSION=array_merge($_SESSION,$_POST);
     print_r($_POST);
     header('location: task2.php');
-    exit();
 }
 print_r($_SESSION)?>
 <?php require_once "inc/footer.php" ?>
