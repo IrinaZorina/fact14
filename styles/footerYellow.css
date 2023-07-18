@@ -232,7 +232,7 @@ table, td{
     justify-items: center;
 }
 footer{
-    background-color: #f9bc60;
+    background-color: #f9bc60!important;
 }
 .footer-right{
     display: flex;

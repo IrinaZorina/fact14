@@ -4,14 +4,14 @@ if (isset($_GET['color'])) {
     setcookie('color', $_GET['color'], time() + 3600 * 24 * 7);
 }
 
-if (isset($_COOKIE)) { // куки проставляется по гет-параметрам (грин, йеллоу, блу). если проверить эко через другие выражения - все работает. но таблицы стилей подключать не хочет, как следствие цвет футера не меняется.
+if (isset($_COOKIE)) {
     foreach ($_COOKIE as $value) {
         if ($value == 'green') {
-            echo "<link rel='stylesheet' href='styles/footerGreen.css'>";
+            echo "<link rel='stylesheet' href='../styles/footerGreen.css'>";
         } elseif ($value == 'yellow') {
-            echo "<link rel='stylesheet' href='styles/footerYellow.css'>";
+            echo "<link rel='stylesheet' href='../styles/footerYellow.css'>";
         } elseif ($value == 'blue') {
-            echo "<link rel='stylesheet' href='styles/footerBlue.css'>";
+            echo "<link rel='stylesheet' href='../styles/footerBlue.css'>";
         }
     }
 }
