@@ -4,36 +4,24 @@
         <div class="wow photo"></div>
         <div class="wow name">Руслан Назаров</div>
         <div class="wow about-me">
-
             <?php
-
             $about_me = 'Всем привет. Меня зовут Руслан. Мне 30 лет. Я работаю в строительной сфере. Год назад захотелось сменить род деятельности, вследствие чего решил пройти курсы UI-дизайнера. Немного пофрилансил. Сейчас же снова работаю строителем. Из хобби чтение фэнтези-книг и видеоигры.';
             aboutMe($about_me);
-
             ?>
-
         </div>
         <div class="wow feedback">
-
             <?php
-
             $feedback = 'Ознакомительный курс был очень интересным. После его прохождения начал смотреть обучающие видео по PHP - настолько мне он понравился.';
             feedback($feedback);
-
             ?>
-
         </div>
     </section>
     <section class="wow some-text">
-
         <?php
-
         $bday = '19-05-1993';
         $date = date("d-m-Y");
         dateDiff($bday, $date);
-
         ?>
-
     </section>
     <section class="bookshelf">
         <div class="wow name-1">Мои любимые книги</div>
@@ -75,16 +63,11 @@
     </section>
     <section>
         <div class="wow some-text">
-
             <?php
-
             $page = file_get_contents('index.php');
-
             vowels($page);
             words($page);
-
             ?>
-
         </div>
     </section>
 </main>

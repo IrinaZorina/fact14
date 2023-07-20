@@ -1,9 +1,8 @@
-<?php include 'globalFunc.php'; ?>
+<?php require_once 'globalFunc.php'; ?>
 <?php
 if (isset($_GET['color'])) {
     setcookie('color', $_GET['color'], time() + 3600 * 24 * 7);
 }
-
 if (isset($_COOKIE)) {
     foreach ($_COOKIE as $value) {
         if ($value == 'green') {
@@ -25,14 +24,10 @@ if (isset($_COOKIE)) {
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=PT+Sans&display=swap" rel="stylesheet">
-
     <?php
-
     $date = date("H");
     theme($date);
-
     ?>
-
     <title>Academy</title>
 </head>
 

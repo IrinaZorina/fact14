@@ -1,4 +1,4 @@
-<?php require 'inc/header.php'; ?>
+<?php require_once 'inc/header.php'; ?>
 <main class="wow some-text">
 
     <!-- Создайте папку 'files'. -->
@@ -79,4 +79,4 @@
     ?>
 
 </main>
-<?php require 'inc/footer.php'; ?>
+<?php require_once 'inc/footer.php'; ?>

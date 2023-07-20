@@ -1,4 +1,4 @@
-<?php require 'inc/header.php'; ?>
+<?php require_once 'inc/header.php'; ?>
 <main class="wow some-text">
 
     <!-- 15 слайд. Задание 1. Создайте форму, состоящую из текстового поля, многострочного поля, группы выключателей, 
@@ -42,7 +42,7 @@
     Если пользователь вводит правильную пару (login/passwd), то сервер выдает страницу с сообщением, 
     что доступ к секретным страницам открыт. Login предлагается выбирать из списка. -->
 
-    <!-- <form action="etc/form_handler.php" method="POST">
+    <form action="etc/form_handler.php" method="POST">
         <select name="name">
             <option value="admin">admin</option>
             <option value="lov3helm">lov3helm</option>
@@ -50,7 +50,7 @@
         </select><br>
         Пароль <input type="password" name="password"><br>
         <button type="submit">Hello</button>
-    </form> -->
+    </form>
 
     <!-- 15 слайд. Задание 4. Создайте форму генерации ссылки с параметром:
     1) Создайте форму и в ней добавьте поле со списком выбора – Лаб1, Лаб2, Лаб3, Лаб4
@@ -80,16 +80,14 @@
 
     <!-- 16 слайд. Задание 2. Создайте форму авторизации. Зашифруйте пароли и отправьте их на сервер. -->
 
-    <!-- <?php
+    <?php
+    // $_POST['password'] = md5($_POST['password']);
+    // echo '<pre>';
+    // print_r($_POST);
+    // echo '</pre>';
+    ?>
 
-            $_POST['password'] = md5($_POST['password']);
-            echo '<pre>';
-            print_r($_POST);
-            echo '</pre>';
-
-            ?>
-
-    <form action="" method="post">
+    <!-- <form action="" method="post">
         Логин: <input type="text" name="login"><br>
         Пароль: <input type="password" name="password"><br>
         <button type="submit">Push</button>
@@ -106,31 +104,31 @@
     Отобразите на экране имя анкетируемого, фразу-результат анкетирования. -->
 
     <?php
+    // $count = 0;
+    // $name = $_GET['name'] ?? '0';
+    // for ($i = 1; $i <= 19; $i++) { // я долго ломал голову как сделать вопросы под конкретными номерами, в результате решил сделать четные нечетные номера вопросов
+    //     if (isset($_GET[$i]) and $i % 2 == 0 and $_GET[$i] == 'no') {
+    //         $count++;
+    //     } elseif (isset($_GET[$i]) and $i % 2 != 0 and $_GET[$i] == 'yes') {
+    //         $count++;
+    //     }
+    // }
 
-    $count = 0;
-    $name = $_GET['name'] ?? '0';
-    for ($i = 1; $i <= 19; $i++) { // я долго ломал голову как сделать вопросы под конкретными номерами, в результате решил сделать четные нечетные номера вопросов
-        if (isset($_GET[$i]) and $i % 2 == 0 and $_GET[$i] == 'no') {
-            $count++;
-        } elseif (isset($_GET[$i]) and $i % 2 != 0 and $_GET[$i] == 'yes') {
-            $count++;
-        }
-    }
     // echo '<pre>';
     // print_r($_GET);
     // echo '</pre>';
 
-    if ($count > 15) {
-        echo $name . ', у Вас покладистый характер!' . '<br>';
-    } elseif ($count > 8 and $count <= 15) {
-        echo $name . ', Вы не лишены недостатков, но с Вами можно ладить!' . '<br>';
-    } elseif ($count > 0 and $count <= 8) {
-        echo $name . ', Вашим друзьям можно посочувствовать!' . '<br>';
-    }
-    echo '<br>';
+    // if ($count > 15) {
+    //     echo $name . ', у Вас покладистый характер!' . '<br>';
+    // } elseif ($count > 8 and $count <= 15) {
+    //     echo $name . ', Вы не лишены недостатков, но с Вами можно ладить!' . '<br>';
+    // } elseif ($count > 0 and $count <= 8) {
+    //     echo $name . ', Вашим друзьям можно посочувствовать!' . '<br>';
+    // }
+    // echo '<br>';
     ?>
 
-    <form action="">
+    <!-- <form action="">
         <label for="name">Ваше имя: <input type="text" id="name" name="name"></label><br>
         <h4>1. Вы любите чай:</h4>
         <label for="yes1"><input type="radio" name="1" id="yes1" value="yes" checked>Да</label>
@@ -190,7 +188,7 @@
         <label for="yes19"><input type="radio" name="19" id="yes19" value="yes" checked>Да</label>
         <label for="no19"><input type="radio" name="19" id="no19" value="no">Нет</label><br>
         <button type="submit">Push</button>
-    </form>
+    </form> -->
 
 </main>
 <?php require_once 'inc/footer.php'; ?>

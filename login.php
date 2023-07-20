@@ -24,7 +24,5 @@ session_start();
 </main>
 <?php require_once 'inc/footer.php'; ?>
 <?php
-
 session_destroy();
-
 ?>
