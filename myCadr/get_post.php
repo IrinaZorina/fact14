@@ -20,7 +20,7 @@ $image = isset($_GET['img']) ? $_GET['img'] : 1;
     require "header.php";
     ?>
     <div class="main">
-        <!-- <form class="form" action="" method="post">
+        <form class="form" action="" method="post">
             <input type="text" name="login">
             <input type="text" name="password">
             <input type="submit">
@@ -29,32 +29,28 @@ $image = isset($_GET['img']) ? $_GET['img'] : 1;
         <img src="image/<?= $image ?>.jpg" alt="#">
         <br>
         <a href="index.php?img=<?php echo ($image > 1) ? ($image - 1) : 5; ?>">Назад</a>
-        <a href="index.php?img=<?php echo ($image < 5) ? ($image + 1) : 1; ?>">Вперед</a> -->
+        <a href="index.php?img=<?php echo ($image < 5) ? ($image + 1) : 1; ?>">Вперед</a>
         <p>ЗАДАЧА. Создайте форму, состоящую из текстового поля, многострочного поля, группы выключателей, группы
             переключателей.
             Выведите на экран значения, которые ввел/выбрал пользователь.
-        <pre>
-       <?php
-       print_r($_POST);
-       ?>
-       </pre>
+
         <form class="form" action="" method="post">
-            <label>
+            <p>
                 Логин: <input type="text" name="login">
-            </label>
-            <label>
-                Пароль: <input type="text" name="password">
-            </label>
-            <label>
-                1<input type="radio" name="radio">
-                2<input type="radio" name="radio">
-                3<input type="radio" name="radio">
-            </label>
-            <label>
-                on <input type="checkbox" name="check[]" value="on" id="">
-                off <input type="checkbox" name="check[]" value="off" id="">
-            </label>
-            <label><input type="submit" name="submit" id=""></label>
+                <pl>
+                    <p>
+                        Пароль: <input type="text" name="password">
+                    </p>
+                    <p>
+                        1<input type="radio" name="radio">
+                        2<input type="radio" name="radio">
+                        3<input type="radio" name="radio">
+                    </p>
+                    <p>
+                        on <input type="checkbox" name="check[]" value="on" id="">
+                        off <input type="checkbox" name="check[]" value="off" id="">
+                    </p>
+                    <p><input type="submit" name="submit" id=""></p>
         </form>
 
         <p>ЗАДАЧА. Дана форма для ввода логина и пароля. Необходимо вывести на экран имя пользователя,
@@ -65,9 +61,9 @@ $image = isset($_GET['img']) ? $_GET['img'] : 1;
         $password = "";
         $algo = CRYPT_BLOWFISH;
         $hash = password_hash($password, $algo);
-        echo "Hash = <br>" . $hash;
+        // echo "Hash = <br>" . $hash;
         // print_r($arr2);
-        $login = 0;
+        $login = "";
         ?>
     </pre>
         <form class="form" action="" method="post">
@@ -95,17 +91,17 @@ $image = isset($_GET['img']) ? $_GET['img'] : 1;
         <pre>
     <?php
     echo "<br>";
-    if(isset($_POST['login']) || isset($_POST['password'])){
-    $login = isset($_POST["login"]) ? $_POST['login'] : 1;
-    $password = isset($_POST["password"]) ? $_POST['password'] : 1;
-    foreach ($_POST as $key => $value) {
-        if ($_POST["login"] == 'login' || $_POST["login"] == 'kir' && $_POST["password"] == 'password') {
-            echo "Доступ к данным открыт! ";
-        } else {
-            echo "Ошибка доступа! ";
+    if (isset($_POST['login']) || isset($_POST['password'])) {
+        $login = isset($_POST["login"]) ? $_POST['login'] : 1;
+        $password = isset($_POST["password"]) ? $_POST['password'] : 1;
+        foreach ($_POST as $key => $value) {
+            if ($_POST["login"] == 'login' || $_POST["login"] == 'kir' && $_POST["password"] == 'password') {
+                echo "Доступ к данным открыт! ";
+            } else {
+                echo "Ошибка доступа! ";
+            }
         }
     }
-}
     ?>
 </pre>
 
@@ -114,23 +110,24 @@ $image = isset($_GET['img']) ? $_GET['img'] : 1;
             При нажатии на кнопку должно быть сформирована
             ссылка следующего вида: phpcourse.php?l=3 ,
             где 3 – это номер выбранной лабораторной работы.
-        <form class="form" action="phpcourse.php" method="get">
+        <p>Выберите лабораторную
+        <form action="phpcourse.php" method="get">
+            <select name="lab" id="">
+                <option value="l1">
+                    <a href="phpcourse.php?l=1" target="_blank">Лаб1</a>
+                </option>
+                <option value="l2">
+                    <a href="phpcourse.php?l=2" target="_blank"> Лаб2</a>
+                </option>
+                <option value="l3">
+                    <a href="phpcourse.php?l=3" target="_blank">Лаб3</a>
+                </option>
+                <option value="l4">
+                    <a href="phpcourse.php?l=4" target="_blank">Лаб4</a>
+                </option>
+            </select>
             <p>
-                Выберите лабораторную
-            <ul>
-                <li>
-                    <a href="phpcourse.php?l=1" name="l1">Лаб1</a>
-                </li>
-                <li>
-                    <a href="phpcourse.php?l=2">Лаб2</a>
-                </li>
-                <li>
-                    <a href="phpcourse.php?l=3">Лаб3</a>
-                </li>
-                <li>
-                    <a href="phpcourse.php?l=4">Лаб4</a>
-                </li>
-            </ul>
+                <input type="submit">
             </p>
         </form>
 
@@ -183,7 +180,6 @@ $image = isset($_GET['img']) ? $_GET['img'] : 1;
             } else {
                 echo "Пароль не верный";
             }
-
             // print_r($_POST);
             ?>
         <form class="form" action="index.php" method="post">
@@ -287,28 +283,29 @@ $image = isset($_GET['img']) ? $_GET['img'] : 1;
         </form>
         <pre>
     <?php
-    $count = 0;
+
     $sum = 0;
-    $value = isset($_POST['value']) ? $_POST['value'] : 0;
     if (isset($_POST['ans'])) {
+        $value = isset($_POST['value']) ? $_POST['value'] : 0;
         $ans = isset($_POST['ans']) ? $_POST['ans'] : 0;
         foreach ($ans as $value) {
-            $sum +=(int)$value;
+            $sum += (int) $value;
         }
     }
     echo "Число баллов = $sum <br>";
+
     switch ($sum) {
-        case $sum >= 15:
+        case ($sum > 15):
             echo "У Вас покладистый характер";
             break;
         case ($sum >= 8 && $sum <= 15):
             echo "Вы не лишены недостатков, но с вами можно ладить";
             break;
-
         default:
             echo "Вашим друзьям можно посочувствовать";
             break;
     }
+    // print_r($_POST);
     ?>
      </pre>
     </div>

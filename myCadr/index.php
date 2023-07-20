@@ -1,8 +1,5 @@
 <?php
 session_start();
-$url='http://mycadr/';
-$_SESSION['url']=$url;
-// header('Location: /index.php');
 ?>
 <!DOCTYPE html>
 <html lang="en">

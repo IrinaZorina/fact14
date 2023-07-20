@@ -1,3 +1,4 @@
+
 <header class="header">
     <div class="logo"><a name="start">LOGO</a></div>
     <div class="nav_auth">
@@ -25,12 +26,18 @@
                 <a href="get_post.php" target="_blank"> get/post запросы</a>
             </li>
             <li nav_bar_item>
+                <a href="forms.php" target="_blank">Формы</a>
+            </li>
+            <li nav_bar_item>
                 <a href="cookie_session.php" target="_blank"> Куки/Сессии</a>
+            </li>
+            <li nav_bar_item>
+                <a href="files/files.php" target="_blank"> Работа с файлами</a>
             </li>
         </div>
         <div class="auth_registr">
-            <div class="auth"><a href="auth.php" target="_blank">Авторизация</a></div>
-            <div class="registr"><a href="registr.php" target="_blank">Регистрация</a></div>
+            <div class="auth"><a href="auth.php" target="_blank">Войти</a></div>
+            <div class="auth"><a href="#" target="_blank">Выйти</a></div>
         </div>
     </div>
 </header>

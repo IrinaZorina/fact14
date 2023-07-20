@@ -1,8 +1,6 @@
 <?php
-session_start();
-$url = 'http://mycadr/bitrix.php';
-$_SESSION['url']=$url;
-// header('Location: /bitrix.php');
+// session_start();
+session_reset();
 ?>
 <!DOCTYPE html>
 <html lang="en">
