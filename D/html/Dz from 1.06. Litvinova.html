@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../style/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap" rel="stylesheet">
+    <title>Document</title>
+</head>
+<body>
+    <table>
+<header class="main">
+    <tr>
+    <td colspan="3"><div class="name">Полина Литвинова</div></td>
+    </tr>
+</header>
+<main>
+    <tr>
+    <section class="one">
+        <td><div class="img" alt="photo"></div></td>
+    </section>
+    <section class="two">
+        <td><div class="about">Всем привет! Я новичок в програмировании, но очень заинтресована в этом направлении. Увлечений немного, но нравится пробовать что-то новое. Являюсь студентом МГТУ им Г.И.Носова.
+        </div></td>
+    </section>
+    <section class="three"> 
+        <td><div class="feedback">На занятии понравилось как Регина подробно каждую чать материала обьясняет и показывает на примере. Особенно для такого новичка, как я.
+        </div></td>  
+    </section>
+        </tr>
+</main>
+    </table>
+</body>
+</html>
+$h = date("H");
+if ($h >=6 AND $h <12)
+    $img = 'morning';
+elseif($h >= 12 AND $h <18)
+    $img = 'day';
+elseif($h >= 18 AND $h <24)
+    $img = 'evening';
+else
+    $img = 'night';
