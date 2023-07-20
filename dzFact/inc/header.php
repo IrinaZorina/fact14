@@ -40,6 +40,7 @@ theme();
                     <li class="menu"><a class="menu_text" href="bitrix.php">Bitrix</a></li>
                     <li class="menu"><a class="menu_text" href="fon.php">Фон</a></li>
                     <li class="menu"><a class="menu_text" href="viktorina.php">Викторина</a></li>
+                    <li class="menu"><a class="menu_text" href="files.php">Файлы</a></li>
 				</ul>
 
 			</div>
