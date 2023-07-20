@@ -237,7 +237,6 @@ foreach ($arrContentText as $word) {
     }
 }
 echo "Количество слов на странице $count";
-
-        ?>
+?>
 </main>
 <?php require_once 'inc/footer.php' ?>

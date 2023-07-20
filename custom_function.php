@@ -1,13 +1,19 @@
 <?php 
 // Функция смены фона
 function hour($currentHour){
-    // $currentHour = date("H");
-if ($currentHour >= 8 && $currentHour < 20) {
-    echo '<link rel="stylesheet" href="/StylesTest/stylesSun.css"';
-} else
+//     // $currentHour = date("H");
+// if ($currentHour >= 8 && $currentHour < 20) {
+//     echo '<link rel="stylesheet" href="/StylesTest/stylesSun.css"';
+// } else
+//     echo '<link rel="stylesheet" href="/StylesTest/stylesNight.css">';
+$currentHour = $_SESSION['color'];
+if($_SESSION['color'] == 1){
     echo '<link rel="stylesheet" href="/StylesTest/stylesNight.css">';
 }
-
+elseif($_SESSION['color'] == 2){
+    echo '<link rel="stylesheet" href="/StylesTest/stylesSun.css"';
+}
+}
 echo '<br>';
 
 // Функция вывода даты
@@ -37,4 +43,25 @@ function color_myOpinion($myOpinion){
                 }
             }
 }
+function verification($name, $pass) {
+    if (isset($_POST['username']) && isset($_POST['password'])) {
+        $name = $_POST['username'];
+        $pass = $_POST['password'];
+    }
+    // Проверка правильности введенных данных и сверка с сохраненными данными
+    if ($name === 'kamnev.valentin@mail.ru' && $pass === '123') {
+        // Верные данные, выполнение действий после авторизации
+        $hashedPassword = password_hash($pass, PASSWORD_DEFAULT);
+        echo $hashedPassword;
+        header('Location: hello.php');
+        exit();
+    }
+        else {
+        // Неверные данные, вывод сообщения об ошибке или другие действия
+        echo 'Неверные данные. Попробуйте снова.';
+    }
+}
+function registr(){
+    header('Location: authorization.php');
+        exit();}
 ?>

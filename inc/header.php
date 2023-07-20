@@ -1,3 +1,6 @@
+<?php 
+session_start();
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -17,13 +20,15 @@ hour($currentHour);
 <body>
     <header>
         <section class="headerlogo">
-            <img width="35px"  src="images/Mandala.jpg" alt="Логотип">
+            <div><img width="35px"  src="images/Mandala.jpg" alt="Логотип"> <a href="authorization.php" style="color: black;">Авторизация</a></div>
             <div class="location"><a class="tabl" href="index.php">Главная</a></div>
             <div class="location"><a class="tabl" href="VerificationTask.php">Таблица</a></div>
             <div class="location1"><a class="tabl" href="training.php">Циклы</a></div>
             <div class="location1"><a class="tabl" href="array.php">Массивы</a></div>
             <div class="location1"><a class="tabl" href="string.php">Строки</a></div>
             <div class="location1"><a class="tabl" href="function.php">Функции</a></div>
+            <div class="location1"><a class="tabl" href="bitrix.php">Bitrix</a></div>
+            <div class="location1"><a class="tabl" href="fact.php">Fact</a></div>
         </section>
 
     </header>

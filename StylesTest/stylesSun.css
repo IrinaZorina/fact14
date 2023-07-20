@@ -31,6 +31,70 @@ body {
     grid-template-rows: 100px 400px;
 }
 
+.hello{
+    display: grid;
+    grid-template-columns: 1fr;
+    width: 400px;
+    height: 300px;
+    background-color: rgb(211, 226, 239);
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    z-index: 1;
+    justify-items: center;
+    align-items: center;
+}
+
+.headerAutorization{
+    display: grid;
+    grid-template-columns: 1fr;
+    background-position: center;
+    position: relative;
+    z-index: 1;
+    justify-items: center;
+    align-items: center;
+    padding: 20px;
+}
+
+.autorization{
+    display: grid;
+    grid-template-columns: 1fr;
+    width: 400px;
+    height: 300px;
+    background-color: rgb(211, 226, 239);
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    z-index: 1;
+    justify-items: center;
+    align-items: center;
+}
+
+.registration {
+    display: grid;
+    grid-template-columns: 1fr;
+    width: 400px;
+    height: 300px;
+    background-color: rgb(211, 226, 239);
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    z-index: 1;
+    justify-items: center;
+    align-items: center;
+}
+
+.headerReg {
+    display: grid;
+    grid-template-columns: 1fr;
+    background-position: center;
+    position: relative;
+    z-index: 1;
+    justify-items: center;
+    align-items: center;
+    padding: 20px;
+}
+
 .images {
     align-self: start;
     grid-row: 2;
@@ -61,7 +125,7 @@ body {
 
 .headerlogo {
     display: grid;
-    grid-template-columns: repeat(7,1fr);
+    grid-template-columns: repeat(9,1fr);
     border-bottom: 1px solid rgb(0, 0, 0);
 
 }
