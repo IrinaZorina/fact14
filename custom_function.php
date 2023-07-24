@@ -6,12 +6,21 @@ function hour($currentHour){
 //     echo '<link rel="stylesheet" href="/StylesTest/stylesSun.css"';
 // } else
 //     echo '<link rel="stylesheet" href="/StylesTest/stylesNight.css">';
+if (isset($_SESSION['color'])){
 $currentHour = $_SESSION['color'];
 if($_SESSION['color'] == 1){
     echo '<link rel="stylesheet" href="/StylesTest/stylesNight.css">';
 }
-elseif($_SESSION['color'] == 2){
+if($_SESSION['color'] == 2){
     echo '<link rel="stylesheet" href="/StylesTest/stylesSun.css"';
+}
+}
+if($_SESSION['color']==null){
+        $currentHour = date("H");
+if ($currentHour >= 8 && $currentHour < 10) {
+    echo '<link rel="stylesheet" href="/StylesTest/stylesSun.css"';
+} else
+    echo '<link rel="stylesheet" href="/StylesTest/stylesNight.css">';
 }
 }
 echo '<br>';

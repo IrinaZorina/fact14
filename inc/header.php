@@ -29,6 +29,8 @@ hour($currentHour);
             <div class="location1"><a class="tabl" href="function.php">Функции</a></div>
             <div class="location1"><a class="tabl" href="bitrix.php">Bitrix</a></div>
             <div class="location1"><a class="tabl" href="fact.php">Fact</a></div>
+            <div class="location1"><a class="tabl" href="GET_POST.php">GET/POST</a></div>
+            <div class="location1"><a class="tabl" href="Working_with_files.php">Working with files</a></div>
         </section>
 
     </header>
