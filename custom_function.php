@@ -1,27 +1,21 @@
 <?php 
 // Функция смены фона
-function hour($currentHour){
-//     // $currentHour = date("H");
-// if ($currentHour >= 8 && $currentHour < 20) {
-//     echo '<link rel="stylesheet" href="/StylesTest/stylesSun.css"';
-// } else
-//     echo '<link rel="stylesheet" href="/StylesTest/stylesNight.css">';
-if (isset($_SESSION['color'])){
-$currentHour = $_SESSION['color'];
-if($_SESSION['color'] == 1){
-    echo '<link rel="stylesheet" href="/StylesTest/stylesNight.css">';
-}
-if($_SESSION['color'] == 2){
-    echo '<link rel="stylesheet" href="/StylesTest/stylesSun.css"';
-}
-}
-if($_SESSION['color']==null){
+function hour($currentHour) {
+    if (isset($_SESSION['color'])) {
+        $currentHour = $_SESSION['color'];
+        if ($_SESSION['color'] == 1) {
+            echo '<link rel="stylesheet" href="/StylesTest/stylesNight.css">';
+        } elseif ($_SESSION['color'] == 2) {
+            echo '<link rel="stylesheet" href="/StylesTest/stylesSun.css">';
+        }
+    } else {
         $currentHour = date("H");
-if ($currentHour >= 8 && $currentHour < 10) {
-    echo '<link rel="stylesheet" href="/StylesTest/stylesSun.css"';
-} else
-    echo '<link rel="stylesheet" href="/StylesTest/stylesNight.css">';
-}
+        if ($currentHour >= 8 && $currentHour < 20) {
+            echo '<link rel="stylesheet" href="/StylesTest/stylesSun.css">';
+        } else {
+            echo '<link rel="stylesheet" href="/StylesTest/stylesNight.css">';
+        }
+    }
 }
 echo '<br>';
 
@@ -57,16 +51,13 @@ function verification($name, $pass) {
         $name = $_POST['username'];
         $pass = $_POST['password'];
     }
-    // Проверка правильности введенных данных и сверка с сохраненными данными
     if ($name === 'kamnev.valentin@mail.ru' && $pass === '123') {
-        // Верные данные, выполнение действий после авторизации
         $hashedPassword = password_hash($pass, PASSWORD_DEFAULT);
         echo $hashedPassword;
         header('Location: hello.php');
         exit();
     }
         else {
-        // Неверные данные, вывод сообщения об ошибке или другие действия
         echo 'Неверные данные. Попробуйте снова.';
     }
 }
