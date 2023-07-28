@@ -6,7 +6,7 @@
                 <p>
                     <label for="select" class="some-text">Выберите цвет подвала:</label>
                     <select name="color" id="select" class="some-text">
-                        <option value="" selected disabled hidden></option>
+                        <option value="" selected disabled hidden>-</option>
                         <option value="green">Зелёный</option>
                         <option value="yellow">Жёлтый</option>
                         <option value="blue">Синий</option>

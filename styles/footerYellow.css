@@ -102,7 +102,7 @@ a{
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    width: 1fr;
+    /* width: 1fr; */
     margin: 10px;
     padding: 10px;
     background-color: #f3d2c1;
@@ -142,7 +142,7 @@ a{
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    width: 1fr;
+    /* width: 1fr; */
     margin: 10px;
     padding: 10px;
     background-color: #f3d2c1;

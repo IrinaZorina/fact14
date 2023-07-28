@@ -1,6 +1,6 @@
 <?php require_once 'inc/header.php'; ?>
 <main>
-    <section class="personal">
+    <div class="personal">
         <div class="wow photo"></div>
         <div class="wow name">Руслан Назаров</div>
         <div class="wow about-me">
@@ -15,15 +15,15 @@
             feedback($feedback);
             ?>
         </div>
-    </section>
-    <section class="wow some-text">
+    </div>
+    <div class="wow some-text">
         <?php
         $bday = '19-05-1993';
         $date = date("d-m-Y");
         dateDiff($bday, $date);
         ?>
-    </section>
-    <section class="bookshelf">
+    </div>
+    <div class="bookshelf">
         <div class="wow name-1">Мои любимые книги</div>
         <div class="about-book">
             <div class="wow book-1"></div>
@@ -41,8 +41,8 @@
             <div class="wow book-4"></div>
             <div class="wow some-text">Имя ветра. Книга 1.<br>Хроники Убийцы Короля.</div>
         </div>
-    </section>
-    <section class="authors">
+    </div>
+    <div class="authors">
         <div class="wow name-1">Мои любимые авторы книг</div>
         <div class="about-author">
             <div class="wow author-1"></div>
@@ -60,8 +60,8 @@
             <div class="wow author-4"></div>
             <div class="wow some-text">Патрик Ротфусс.</div>
         </div>
-    </section>
-    <section>
+    </div>
+    <div>
         <div class="wow some-text">
             <?php
             $page = file_get_contents('index.php');
@@ -69,6 +69,6 @@
             words($page);
             ?>
         </div>
-    </section>
+    </div>
 </main>
 <?php require_once 'inc/footer.php'; ?>

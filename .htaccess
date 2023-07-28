@@ -1,2 +1,2 @@
 AddDefaultCharset UTF-8
-ErrorDocument 404 /etc/error.html
+ErrorDocument 404 /error.html

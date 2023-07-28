@@ -6,11 +6,11 @@ if (isset($_GET['color'])) {
 if (isset($_COOKIE)) {
     foreach ($_COOKIE as $value) {
         if ($value == 'green') {
-            echo "<link rel='stylesheet' href='../styles/footerGreen.css'>";
+            echo "<link rel='stylesheet' href='styles/footerGreen.css'>";
         } elseif ($value == 'yellow') {
-            echo "<link rel='stylesheet' href='../styles/footerYellow.css'>";
+            echo "<link rel='stylesheet' href='styles/footerYellow.css'>";
         } elseif ($value == 'blue') {
-            echo "<link rel='stylesheet' href='../styles/footerBlue.css'>";
+            echo "<link rel='stylesheet' href='styles/footerBlue.css'>";
         }
     }
 }
@@ -20,7 +20,7 @@ if (isset($_COOKIE)) {
 
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=PT+Sans&display=swap" rel="stylesheet">
@@ -47,8 +47,16 @@ if (isset($_COOKIE)) {
                 <a href="strings.php" class="item">Строки</a>
                 <a href="function.php" class="item">Функции</a>
             </nav>
-            <div class="wow nav">
-                <a href="login.php" class="item">Авторизация</a>
-            </div>
+            <?php
+            if (isset($_COOKIE['user']) == '') :
+            ?>
+                <div class="wow nav">
+                    <a href="login.php" class="item">Войти</a>
+                </div>
+            <?php else : ?>
+                <div class="wow nav">
+                    <a href="validation/exit.php" class="item">Выйти</a>
+                </div>
+            <?php endif; ?>
         </div>
     </header>
