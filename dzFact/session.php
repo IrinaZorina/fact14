@@ -15,6 +15,7 @@ print_r($_SESSION['login']);
     <input type="submit" value="очистить">
 </form>
 
+
 <?php
 print_r($_SESSION);
 if($_POST['ochistka']==100){
