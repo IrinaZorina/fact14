@@ -1,9 +1,8 @@
 <?php require_once 'inc/header.php'?>
 <main>
-<br>
     <section class="conteaner">
         <div class="images"></div>
-        <div class="name"><strong>Камнев Валентин</strong></div>
+        <div class="name"><h3>Камнев Валентин</h3></div>
         <div class="aboutMe">
             <?php
             $aboutMy = 'Всем привет. Меня зовут Валентин. Работаю контент менеджером в компании “Торговый дом
@@ -25,7 +24,7 @@
     <br>
     <br>
     <section class="conteanerTemple">
-        <div class="paragraph1"> <strong>Достопримечательности Азии.</strong></div>
+        <div class="paragraph1"> <h3>Достопримечательности Азии.</h3></div>
         <div class="griditem">
             <div class="Angkor"></div>
             <p>Храмовый комплекс <br> Ангкор-Ват.<br>Сиемреап север Камбоджи.</p>
@@ -44,7 +43,7 @@
         </div>
     </section>
     <section class="conteanerStatues">
-        <div class="paragraph2"><strong>Одни из самых высоких статуй мира.</strong></div>
+        <div class="paragraph2"><h3>Одни из самых высоких статуй мира.</h3></div>
         <div class="statue">
             <div class="bigBuddha"></div>
             <p>Будда Майтрея <br> Лэшань.</p>

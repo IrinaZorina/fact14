@@ -18,34 +18,13 @@
             <button type="submit">Зарегистрироваться</button>
             <?php
             
-            //Проверяем входящие данные
-            if (isset($_POST['username']) && isset($_POST['password']) && isset($_POST['email'])) {
-                $username = $_POST['username'];
-                $password = $_POST['password'];
-                $email = $_POST['email'];
-                //Подключаемся к БД
-                $hostname = 'localhost';
-                $username = 'Valentin';
-                $password = '123';
-                $bdname = 'Registration';
-                $connect = mysqli_connect($hostname, $username, $password);
-                mysqli_select_db($connect, $bdname);
-                //Проверка
-                $query = "SELECT * FROM Users WHERE name = '$username' OR password = '$password'";
-            $result = mysqli_query($connect, $query);
-            if ($result && mysqli_num_rows($result) > 0) {
-                $user = mysqli_fetch_assoc($result);
-                // Сравниваем
-                if ($username == $user['name'] || $password == $user['password']) {
-                    // Неверный пароль
-                    echo "Логин уже существует.";
+            include 'testRegistrationK.php'; // Подключаем файл с классом Registration
+            if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+                // Проверяем, была ли отправлена форма
+                if (isset($_POST['username']) && isset($_POST['password']) && isset($_POST['email'])) {
+                    $registration = new Registration(); // Создаем экземпляр класса Registration
+                    $registration->registration(); // Вызываем метод registration() для обработки регистрации
                 }
-            }
-            else{
-                //Заносим данные в БД
-                $arr = mysqli_query($connect, "INSERT INTO Users (name,password,email) VALUE ('$username','$password','$email')");
-                registr();
-            }
             }
             ?>
     </section>

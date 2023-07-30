@@ -7,7 +7,7 @@
     } else
         echo '<link rel="stylesheet" href="/StylesVerefication/TaskStyleNight.css">';
     ?>
-    <form action="">
+    <form >
         <br>
         <label for="login">Имя пользователя :</label>
         <input id="login" type="text" name="login" placeholder="enter your login"><br>
