@@ -1,4 +1,3 @@
-
 <header class="header">
     <div class="logo"><a name="start">LOGO</a></div>
     <div class="nav_auth">
@@ -34,10 +33,15 @@
             <li nav_bar_item>
                 <a href="files/files.php" target="_blank"> Работа с файлами</a>
             </li>
+            <li nav_bar_item>
+                <a href="database.php" target="_blank"> Базы данных</a>
+            </li>
+            <li nav_bar_item>
+                <a href="oop/strings.php" target="_blank"> ООП</a>
+            </li>
         </div>
         <div class="auth_registr">
-            <div class="auth"><a href="auth.php" target="_blank">Войти</a></div>
-            <div class="auth"><a href="#" target="_blank">Выйти</a></div>
+            <div class="auth"><a href="index.php" target="_blank">Выйти</a></div>
         </div>
     </div>
 </header>

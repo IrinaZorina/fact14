@@ -1,4 +1,6 @@
 <?php
+print_r($_FILES);
+
 // Это только откроет файл
 // $file=fopen('text.txt','r');
 // // Теперь читаем
@@ -10,6 +12,11 @@
 //     echo "$char <br>";
 // }
 // // echo $str;
+
+
+if (isset($_FILES['file'])) {
+    move_uploaded_file($_FILES['file']['tmp_name'], "\academy\images" . $_FILES['file']['name']);
+}
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -18,14 +25,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <?php
-    // include_once "../myCard../customFunc/changeTheme.php";
-    // changeTheme();
+    require_once "../../customFunc/changeTheme.php";
+    changeTheme();
     ?>
     <title>Document</title>
 </head>
 
 <body>
-    <p> Загрузить файл в папку
     <form action="" method="post" enctype="multipart/form-data">
 
         <input type="text" name="login" id="">
@@ -34,19 +40,13 @@
         <input type="file" name="file" id="">
     </form>
 
-    <?php
-    print_r($_FILES);
-    if (isset($_FILES['file'])) {
-        move_uploaded_file($_FILES['file']['tmp_name'], "\academy\images" . $_FILES['file']['name']);
-    }
-    ?>
     <p>ЗАДАЧА. Создайте файл hello.txt и сохраните в него текст 'Hello, world! I'm Name'
         <?php
         $openFile = fopen('hello.txt', 'w');
         $str = "Hello, world! I'm Kirill";
         fwrite($openFile, $str);
         ?>
-
+        
     <p> ЗАДАЧА. Создайте папку 'test'.
         <?php
         if (!is_dir('test')) {
