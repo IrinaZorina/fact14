@@ -23,6 +23,7 @@ session_start();
 
         <p>
             <?php
+            // Эта сессия выводит сообщение об ошибке автризации, неверном логине и пароле. После удаляетяся
             if (isset($_SESSION['data_err'])) {
                 echo $_SESSION['data_err'];
                 unset($_SESSION['data_err']);

@@ -6,7 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <!-- <link rel="stylesheet" href="styles/style.css"> -->
   <?php
-  include "../customFunc/changeTheme.php";
+  include "customFunc/changeTheme.php";
    changeTheme();
   ?>
   <title>Mendeleev table</title>
@@ -17,7 +17,7 @@
   include "header.php";
   ?>
 
-  <img src="image/table.jpg" alt="" />
+  <img src="image/table.jpg" width='500' height='500' alt="" />
   <h4>Элементы таблица Менделеева</h4>
   <h4>FLEX</h4>
   <!--В ТАБЛИЦЕ ВСЕГО 2 ВИДА РАСПОЛОЖЕНИЯ КОНТЕЙНЕРОВ В ЯЧЕКЕ. КАК ВОДОРОД И КАК ЖЕЛЕЗО 

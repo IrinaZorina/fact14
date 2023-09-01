@@ -1,5 +1,6 @@
 <?php
 session_start();
+$_SESSION['last_page'] = 'http://mycadr/my_card.php';
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -7,9 +8,8 @@ session_start();
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <!-- <link rel="stylesheet" href="styles/style.css"> -->
-    <?php
-    require "../customFunc/changeTheme.php";
+
+    <? include_once "customFunc/changeTheme.php";
     changeTheme();
     ?>
     <title>My Card</title>
@@ -51,7 +51,7 @@ session_start();
                         маловато.
                         Но на деле задания дают такие, что порой приходится часами писать и переписывать код,
                         гуглить инфу!";
-                            require_once "../customFunc/paintWords.php";
+                            require_once "customFunc/paintWords.php";
                             paintWords($text, "orange", "blue");
                             ?>
                         <p>
@@ -127,17 +127,17 @@ session_start();
         </div>
         <p> Мой возраст
             <?php
-            require "../customFunc/countDays.php";
+            require "customFunc/countDays.php";
             countDays("04-12-1984");
             ?>
         <p>Количество гласных букв на странице =
             <?php
-            require "../customFunc/countVowels.php";
+            require "customFunc/countVowels.php";
             countVowels('index.php');
             ?>
         <p>Количество слов на странице =
             <?php
-            require "../customFunc/countWords.php";
+            require "customFunc/countWords.php";
             countWords('index.php');
             ?>
             <!-- =====================FOOTER====================== -->
@@ -147,4 +147,4 @@ session_start();
     </div>
 </body>
 
-</html>";
+</html>;

@@ -1,6 +1,7 @@
 <?php
-// session_start();
-session_reset();
+session_start();
+$_SESSION['last_page'] = 'http://mycadr/bitrix.php';
+
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -13,6 +14,7 @@ session_reset();
 
 <body>
     <h1>Это страница Bitrix</h1>
+    <h3><a href="choice.php">Вернуться к выбору страниц</a></h3>
 </body>
 
 </html>

@@ -3,17 +3,17 @@ session_start();
 require_once "authregistr/database.php";
 // Заришем переменные в массив POST
 $password = isset($_POST['password']) ? $_POST['password'] : 0;
- $hash = isset($_POST['hash'])?$_POST['hash']:0;
 $passwordConfirm = isset($_POST['passwordConfirm']) ? $_POST['passwordConfirm'] : 0;
 $fullName = isset($_POST['fullName']) ? $_POST['fullName'] : 0;
 $login = isset($_POST['login']) ? $_POST['login'] : 0;
 $email = isset($_POST['email']) ? $_POST['email'] : 0;
+
 // Проверка заполнения данных
 if (empty($fullName) || empty($login) || empty($email) || empty($password) || $password !== $passwordConfirm) {
     $_SESSION['data_err'] = "Вы заполнили не все данные или пароли не совпадают";
     header("Location: registr.php");
 }
-if()
+
 echo "<br>";
 
 ?>

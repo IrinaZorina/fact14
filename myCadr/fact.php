@@ -1,13 +1,6 @@
 <?php
-// session_start();
-$lastpage = isset($_COOKIE['lastpage']) ? $_COOKIE['lastpage'] : 0;
-$_COOKIE['lastpage'] = $lastpage;
-$lastpage = 'http://mycadr/fact.php';
-setcookie('fact', $lastpage,time()+3600,'/fact.php');
-// session_reset();
-
-
-// header('Location: /fact.php');
+session_start();
+$_SESSION['last_page'] = 'http://mycadr/fact.php';
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -20,6 +13,7 @@ setcookie('fact', $lastpage,time()+3600,'/fact.php');
 
 <body>
     <h1>Это страница Fact</h1>
+    <h3><a href="choice.php">Вернуться к выбору страниц</a></h3>
 </body>
 
 </html>

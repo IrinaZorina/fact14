@@ -83,7 +83,6 @@ class Strings
     }
 }
 ?>
-
 <!DOCTYPE html>
 <html lang="en">
 
@@ -92,43 +91,48 @@ class Strings
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <?php
-    require_once "../../customFunc/changeTheme.php";
+    require_once "customFunc/changeTheme.php";
     changeTheme();
     ?>
 </head>
 
 <body>
-    <p>ЗАДАЧА. Написать функцию замены подстроки в строке</p>
-    <?php
-    $str = new Strings("Привет мир");
-    // Замена
-    $str1 = $str->mb_str_replace("П", "б", "ПРивет");
-    echo "Измененная строка = " . $str1 . "<br>";
-    ?>
+    <? include_once "header.php"; ?>
+
+    <p>ЗАДАЧА. Написать функцию замены подстроки в строке
+        <?php
+        echo "<br>";
+        $str = new Strings("Привет мир");
+        $str1 = $str->mb_str_replace("П", "б", "ПРивет");
+        echo "ОТВЕТ: Измененная строка = " . $str1;
+        ?>
     <p>ЗАДАЧА. Написать функцию удаление подстроки из строки
-        // Удаление
-        <?php $str2 = $str->del_sub_string("При", " ", "Привет Привет Привет");
-        echo "Строка с удаленной подстрокой = " . $str2 . "<br>";
+        <?php
+        echo "<br>";
+        $str2 = $str->del_sub_string("При", " ", "Привет Привет Привет");
+        echo "ОТВЕТ: Строка с удаленной подстрокой = " . $str2 . "<br>";
         $str3 = $str->mb_str_replace("При", " ", "Привет Привет Привет");
-        echo "Строка с удаленной подстрокой = " . $str3 . "<br>";
+        echo "ОТВЕТ: Строка с удаленной подстрокой = " . $str3;
         ?>
-        <p>ЗАДАЧА. Написать функцию нахождения длины строки</p>
+    <p>ЗАДАЧА. Написать функцию нахождения длины строки
         <?php
-        // Длина строки
+        echo "<br>";
         $str4 = $str->str_length("Привет Привет Привет");
-        echo "Длина строки = " . $str4 . "<br>";
+        echo "ОТВЕТ: Длина строки = " . $str4;
         ?>
-        <p>ЗАДАЧА. Написать функцию поиска подстроки</p>
-        // Поиск подстроки
+    <p>ЗАДАЧА. Написать функцию поиска подстроки
         <?php
+        echo "<br>";
         $str5 = $str->get_substring("Привет", 1, 4);
-        echo "Подстрока = " . $str5 . "<br>";
+        echo "ОТВЕТ: Подстрока = " . $str5;
         ?>
-        <p>ЗАДАЧА. Написать функцию повторения подстроки N раз</p>
+    <p>ЗАДАЧА. Написать функцию повторения подстроки N раз
         <?php
+        echo "<br>";
         $str6 = $str->get_repeat_str("Пока", 0, 3, 10);
-        echo "Вот столько повторов подстрок: " . $str6;
+        echo "ОТВЕТ: Вот столько повторов подстрок: " . $str6;
         ?>
+        <? include_once "footer.php" ?>
 </body>
 
 </html>

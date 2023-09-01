@@ -26,7 +26,7 @@ $_SESSION['time'] = $newTime;
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <?php
-    require "../customFunc/changeTheme.php";
+    require "customFunc/changeTheme.php";
     changeTheme();
     ?>
     <title>cookie_session</title>
@@ -47,9 +47,11 @@ $_SESSION['time'] = $newTime;
     <p>ЗАДАЧА 2. Запишите в сессию время захода пользователя на сайт.
         При обновлении страницы выводите сохраненное время на экран.
         <?php
+        if(isset($_SESSION['time'])){
         $_SESSION['time'] = date('H-m-s');
         $time = date('H-m-s');
         echo "ОТВЕТ: Последний раз пользователь заходил на сайт в " . $time;
+        }
         ?>
 
     <p>ЗАДАЧА 3. Запишите в сессию время захода пользователя на сайт.

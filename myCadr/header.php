@@ -4,7 +4,7 @@
 
         <div class="nav_bar">
             <li nav_bar_item>
-                <a href="index.php" target="_blank"> Главная</a>
+                <a href="my_card.php" target="_blank"> Главная</a>
             </li>
             <li nav_bar_item>
                 <a href="mendeleev.php" target="_blank"> Таблица Менделеева</a>
@@ -22,26 +22,27 @@
                 <a href="functions.php" target="_blank"> Функции</a>
             </li>
             <li nav_bar_item>
-                <a href="get_post.php" target="_blank"> get/post запросы</a>
-            </li>
-            <li nav_bar_item>
-                <a href="forms.php" target="_blank">Формы</a>
+                <a href="get_post.php" target="_blank"> Формы. get/post запросы</a>
             </li>
             <li nav_bar_item>
                 <a href="cookie_session.php" target="_blank"> Куки/Сессии</a>
             </li>
             <li nav_bar_item>
-                <a href="files/files.php" target="_blank"> Работа с файлами</a>
+                <a href="files.php" target="_blank"> Работа с файлами</a>
             </li>
             <li nav_bar_item>
-                <a href="database.php" target="_blank"> Базы данных</a>
+                <a href="db_home_work.php" target="_blank"> Базы данных</a>
             </li>
             <li nav_bar_item>
-                <a href="oop/strings.php" target="_blank"> ООП</a>
+                <a href="stringsOOP.php" target="_blank"> ООП</a>
+            </li>
+            <li nav_bar_item>
+                <a href="choice.php" target="_blank"> Посетите другие страницы</a>
             </li>
         </div>
         <div class="auth_registr">
             <div class="auth"><a href="index.php" target="_blank">Выйти</a></div>
+
         </div>
     </div>
 </header>

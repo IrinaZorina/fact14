@@ -31,7 +31,7 @@ if (mysqli_num_rows($checkUser) > 0) {
         'password'->$user[$password],
         'email'->$user[$email]
     ];
-    header("Location: my_card.php");
+    header("Location: choice.php");
 } else {
     $_SESSION['data_err'] = "Не верный логин или пароль";
     header("Location: index.php");

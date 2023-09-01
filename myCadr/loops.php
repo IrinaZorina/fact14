@@ -4,7 +4,7 @@
 <head>
     <!-- <link rel="stylesheet" href="styles/style.css"> -->
     <?php
-    include "../customFunc/changeTheme.php";
+    include "customFunc/changeTheme.php";
     changeTheme();
     ?>
     <title>Loops</title>

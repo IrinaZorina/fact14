@@ -8,8 +8,8 @@ $image = isset($_GET['img']) ? $_GET['img'] : 1;
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <?php
-    // require "../customFunc/changeTheme.php";
-    // changeTheme();
+    require "customFunc/changeTheme.php";
+    changeTheme();
     ?>
 
     <title>get_post</title>
@@ -210,7 +210,7 @@ $image = isset($_GET['img']) ? $_GET['img'] : 1;
             </p>
             <p>3.
                 да <input type="checkbox" name="ans[]" value="1">
-                нет <input type="checkbox" name="ans[]" value="">
+                нет <input type="checkbox" name="ans[]" value="0">
             </p>
             <p>4.
                 да <input type="checkbox" name="ans[]" value="0">
